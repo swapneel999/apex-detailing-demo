@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tire & Torque | Premium</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="bg-stone-950 text-neutral-100 font-sans">
+    <div id="canvas-container" class="fixed inset-0 z-0 opacity-40"></div>
+    
+    <main class="relative z-10 max-w-6xl mx-auto px-6 py-20">
+        <h1 class="text-6xl font-black tracking-tight text-lime-400">TIRE & TORQUE</h1>
+        <p class="mt-4 text-xl text-neutral-400 max-w-xl">Precision mechanics meets immersive digital architecture.</p>
+    </main>
+
+    <script>
+        // Immersive 3D background animation setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true });
+        // Animation loop logic continues...
+    </script>
+</body>
+</html>
