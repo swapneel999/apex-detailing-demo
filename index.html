@@ -1,13 +1,25 @@
 
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <title>Vanguard Estate | Regional Fine Wines</title>
         <link rel="stylesheet" href="styles.css">
-        <script src="scene.js" defer></script>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <script src="ambiance.js" defer></script>
     </head>
-    <body class="bg-black text-white">
-        <div id="canvas-target"></div>
-        <h1>Cinematic Motion Portfolio</h1>
+    <body class="bg-stone-900 text-stone-100 font-serif">
+        <section class="min-h-screen flex flex-col justify-between p-8 relative overflow-hidden">
+            <div class="z-10 max-w-2xl mt-20">
+                <p class="text-xs uppercase tracking-widest text-amber-400 mb-2">Est. 2014 | Cool Climate Varietals</p>
+                <h1 class="text-7xl font-light tracking-tight text-stone-50 leading-none mb-6">Vanguard Estate</h1>
+                <p class="text-lg text-stone-400 font-sans font-light leading-relaxed">Crafting award-winning maritime-influenced wines nestled along the coastal hills.</p>
+            </div>
+            <div class="z-10 mb-10 font-sans">
+                <a href="#tasting" class="border border-stone-400 text-stone-200 hover:bg-amber-400 hover:text-stone-900 transition-all duration-300 px-6 py-3 rounded-none tracking-wider text-sm uppercase">Book a Cellar Door Experience</a>
+            </div>
+            <div id="canvas-bg" class="absolute inset-0 z-0 opacity-30"></div>
+        </section>
     </body>
     </html>
     
