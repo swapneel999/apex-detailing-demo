@@ -12,6 +12,6 @@ def get_user():
     cursor = conn.cursor()
     query = "SELECT * FROM users WHERE id = ?"
     cursor.execute(query, (user_id,))
-    result = cursor.fetchall()
+    result = str(cursor.fetchall())
     conn.close()
-    return str(result)
+    return result
