@@ -326,4 +326,165 @@
 <a class="font-code-sm text-code-sm text-outline hover:bg-primary/10 hover:text-primary px-2 py-1 transition-colors" href="#">ENCRYPTED_COMMS</a>
 </div>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- Helper function to split text into words for staggered animation ---
+        function splitTextIntoWords(element, className = 'gsap-word') {
+            if (!element) return [];
+            const words = element.textContent.trim().split(/\s+/).filter(word => word.length > 0);
+            element.innerHTML = ''; // Clear original content
+
+            const spans = [];
+            words.forEach((word, index) => {
+                const span = document.createElement('span');
+                span.textContent = word;
+                span.style.display = 'inline-block'; // Make each word its own block for transform
+                span.style.whiteSpace = 'nowrap'; // Prevent words from breaking
+                span.classList.add(className);
+                element.appendChild(span);
+                if (index < words.length - 1) {
+                    element.appendChild(document.createTextNode(' ')); // Add space between words
+                }
+                spans.push(span);
+            });
+            return spans;
+        }
+
+        // --- 1. Hero Section: Staggered word fade-in and Y-translation ---
+        const heroP = document.querySelector('p.animate-pulse');
+        const heroH1 = document.querySelector('h1.text-display-lg-mobile');
+        const heroButton = document.querySelector('a[href="#connect"]');
+
+        let pWords = [];
+        if (heroP) {
+            const cursorSpan = heroP.querySelector('.inline-block'); // Get the blinking cursor span
+            heroP.classList.remove('animate-pulse'); // Remove animate-pulse from the p tag
+            if (cursorSpan && !cursorSpan.classList.contains('animate-pulse')) {
+                // If the cursor span doesn't have it, add it so the cursor still pulses
+                cursorSpan.classList.add('animate-pulse');
+            }
+
+            const pTextContent = heroP.textContent; // Get full text content
+            heroP.innerHTML = ''; // Clear the paragraph
+
+            // Reconstruct words and re-append original cursor span
+            const words = pTextContent.split(/\s+/).filter(word => word.length > 0);
+            words.forEach((word, index) => {
+                const span = document.createElement('span');
+                span.textContent = word;
+                span.style.display = 'inline-block';
+                span.style.whiteSpace = 'nowrap';
+                span.classList.add('gsap-word-hero-p');
+                heroP.appendChild(span);
+                if (index < words.length - 1) {
+                    heroP.appendChild(document.createTextNode(' '));
+                }
+            });
+            if (cursorSpan) {
+                heroP.appendChild(cursorSpan); // Re-append the original cursor span
+            }
+            pWords = heroP.querySelectorAll('.gsap-word-hero-p');
+        }
+
+        let h1Words = [];
+        if (heroH1) {
+            h1Words = splitTextIntoWords(heroH1, 'gsap-word-hero-h1');
+        }
+
+        // Combine all hero words for animation
+        const allHeroWords = [...pWords, ...h1Words];
+
+        gsap.timeline({ delay: 0.5 }) // Initial delay for overall hero entrance
+            .from(allHeroWords, {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                ease: "power3.out",
+                stagger: 0.05
+            }, 0) // Start words at the beginning of the timeline
+            .from(heroButton, {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                ease: "power3.out",
+            }, 1.2); // Animate button after words
+
+        // --- Navigation elements initial animation ---
+        gsap.from('nav > div:first-child', { opacity: 0, y: -20, duration: 0.8, ease: "power3.out", delay: 0.2 });
+        gsap.from('nav .md\\:flex a', { opacity: 0, y: -20, duration: 0.6, ease: "power2.out", stagger: 0.1, delay: 0.4 });
+        gsap.from('nav button.md\\:block', { opacity: 0, y: -20, duration: 0.6, ease: "power2.out", delay: 0.8 });
+
+
+        // --- 2. Scroll Interactions: Fade in + translate from bottom for main section content ---
+
+        // Core Architecture Section
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: "#arch",
+                start: "top 80%", // When the top of the section hits 80% down the viewport
+                toggleActions: "play none none none", // Play once on enter
+            }
+        })
+        .from("#arch > div.flex", { opacity: 0, y: 40, duration: 0.8, ease: "power3.out" }) // Section title
+        .from("#arch .glass-panel", { // Grid items
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            ease: "power3.out",
+            stagger: 0.15
+        }, "-=0.4"); // Overlap with title animation
+
+        // Deployment Log Section
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: "#logs",
+                start: "top 80%",
+                toggleActions: "play none none none",
+            }
+        })
+        .from("#logs > div.grid > div:first-child", { opacity: 0, y: 40, duration: 0.8, ease: "power3.out" }) // Left sticky content
+        .from("#logs > div.grid > div:nth-child(2) > div > div", { // Each timeline entry (direct children of the timeline container)
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            ease: "power3.out",
+            stagger: 0.2
+        }, "-=0.4");
+
+        // Live Models Section
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: "#models",
+                start: "top 80%",
+                toggleActions: "play none none none",
+            }
+        })
+        .from("#models > div.flex", { opacity: 0, y: 40, duration: 0.8, ease: "power3.out" }) // Section title
+        .from("#models .glass-panel", { // Bento grid items
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            ease: "power3.out",
+            stagger: 0.15
+        }, "-=0.4");
+
+        // Contact Section
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: "#connect",
+                start: "top 80%",
+                toggleActions: "play none none none",
+            }
+        })
+        .from("#connect > div.grid > div:first-child", { opacity: 0, y: 40, duration: 0.8, ease: "power3.out" }) // Left contact info
+        .from("#connect > div.grid > div:nth-child(2)", { opacity: 0, y: 40, duration: 0.8, ease: "power3.out" }, "-=0.4"); // Right form panel
+
+        // --- 3. Marquees: No explicit marquee elements found in HTML, so skipping this requirement. ---
+    });
+</script>
 </body></html>
