@@ -328,4 +328,87 @@
             });
         });
     </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Global Animation Settings ---
+        // Define a common ease for smoother, more consistent motion.
+        const defaultEase = "power2.out";
+        const fastEase = "power1.inOut";
+
+        // --- Continuous Scanline Effect ---
+        // Creates a subtle, continuous vertical scanline movement, enhancing the retro-tech aesthetic.
+        gsap.to(".scanline", {
+            backgroundPositionY: "4px", // Moves the background by its defined size for a seamless loop
+            duration: 0.15,             // A quick, almost imperceptible movement per step
+            repeat: -1,                 // Loops infinitely
+            ease: "none"                // No easing for a consistent, mechanical feel
+        });
+
+        // --- Page Entrance Timeline ---
+        // Orchestrates the initial animations for a polished and engaging load experience.
+        const entranceTl = gsap.timeline({
+            defaults: {
+                ease: defaultEase,
+                duration: 1
+            }
+        });
+
+        // 1. Header Entrance: Slides down and fades in from the top.
+        entranceTl.from("header", {
+            yPercent: -100, // Starts completely off-screen above
+            opacity: 0,
+            duration: 1.2,
+            delay: 0.3 // A slight pause before the main content appears
+        })
+        // 2. Logo Entrance: Appears with a subtle scale and fade, slightly overlapping the header animation.
+        .from("header img", {
+            opacity: 0,
+            scale: 0.8,
+            duration: 0.9,
+            ease: "back.out(1.7)" // A gentle bounce for a touch of character
+        }, "-=0.6"); // Starts 0.6 seconds before the header animation ends
+
+        // --- Interactive Elements (Future Expansion) ---
+        // While the current HTML is minimal, an elite motion designer anticipates future interactive elements.
+        // This section provides a placeholder for common interactive animations.
+
+        // Example: Zero Latency Hover Effect (if applied to a button/link)
+        // The HTML already defines `.zero-latency-hover`. GSAP can enhance this with more controlled transitions.
+        // If there were a button like `<button class="zero-latency-hover">Click Me</button>`:
+        // gsap.utils.toArray(".zero-latency-hover").forEach(button => {
+        //     button.addEventListener("mouseenter", () => {
+        //         gsap.to(button, {
+        //             backgroundColor: "#00FFFF",
+        //             color: "#050505",
+        //             duration: 0.2,
+        //             ease: fastEase
+        //         });
+        //     });
+        //     button.addEventListener("mouseleave", () => {
+        //         gsap.to(button, {
+        //             backgroundColor: "transparent", // Or original background
+        //             color: "#d7e3fa", // Or original color
+        //             duration: 0.2,
+        //             ease: fastEase
+        //         });
+        //     });
+        // });
+
+        // Example: Pulse Square (if applied to an indicator or icon)
+        // The HTML already defines `.pulse-square`. GSAP can provide more control over the pulse.
+        // If there were an element like `<div class="pulse-square w-4 h-4 bg-cyan-glow"></div>`:
+        // gsap.to(".pulse-square", {
+        //     scale: 0.9,
+        //     opacity: 0.5,
+        //     duration: 1,
+        //     repeat: -1,
+        //     yoyo: true, // Animates back and forth
+        //     ease: "sine.inOut"
+        // });
+
+        // Note: For more complex pages, consider using GSAP ScrollTrigger for elements entering the viewport,
+        // and splitting text for advanced typographic animations.
+    });
+</script>
 </body></html>
