@@ -1,170 +1,153 @@
 ---
-name: Orbital Precision
+name: Cyber-Minimalist Portfolio
 colors:
-  surface: '#071424'
-  surface-dim: '#071424'
-  surface-bright: '#2e3a4b'
-  surface-container-lowest: '#030f1e'
-  surface-container-low: '#101c2c'
-  surface-container: '#142031'
-  surface-container-high: '#1f2b3c'
-  surface-container-highest: '#2a3547'
-  on-surface: '#d7e3fa'
-  on-surface-variant: '#b9cac9'
-  inverse-surface: '#d7e3fa'
-  inverse-on-surface: '#253142'
-  outline: '#839493'
-  outline-variant: '#3a4a49'
-  surface-tint: '#00dddd'
-  primary: '#ffffff'
-  on-primary: '#003737'
-  primary-container: '#00fbfb'
-  on-primary-container: '#007070'
-  inverse-primary: '#006a6a'
-  secondary: '#b8c3ff'
-  on-secondary: '#002388'
-  secondary-container: '#0043eb'
-  on-secondary-container: '#c6ceff'
-  tertiary: '#ffffff'
-  on-tertiary: '#313030'
-  tertiary-container: '#e5e2e1'
-  on-tertiary-container: '#656464'
+  surface: '#12131a'
+  surface-dim: '#12131a'
+  surface-bright: '#383940'
+  surface-container-lowest: '#0c0e14'
+  surface-container-low: '#1a1b22'
+  surface-container: '#1e1f26'
+  surface-container-high: '#282a31'
+  surface-container-highest: '#33343c'
+  on-surface: '#e2e1eb'
+  on-surface-variant: '#bcc9cd'
+  inverse-surface: '#e2e1eb'
+  inverse-on-surface: '#2f3037'
+  outline: '#869397'
+  outline-variant: '#3d494c'
+  surface-tint: '#4cd7f6'
+  primary: '#4cd7f6'
+  on-primary: '#003640'
+  primary-container: '#06b6d4'
+  on-primary-container: '#00424f'
+  inverse-primary: '#00687a'
+  secondary: '#c3c0ff'
+  on-secondary: '#1d00a5'
+  secondary-container: '#3626ce'
+  on-secondary-container: '#b3b1ff'
+  tertiary: '#ffb873'
+  on-tertiary: '#4b2800'
+  tertiary-container: '#e89337'
+  on-tertiary-container: '#5b3200'
   error: '#ffb4ab'
   on-error: '#690005'
   error-container: '#93000a'
   on-error-container: '#ffdad6'
-  primary-fixed: '#00fbfb'
-  primary-fixed-dim: '#00dddd'
-  on-primary-fixed: '#002020'
-  on-primary-fixed-variant: '#004f4f'
-  secondary-fixed: '#dde1ff'
-  secondary-fixed-dim: '#b8c3ff'
-  on-secondary-fixed: '#001356'
-  on-secondary-fixed-variant: '#0035be'
-  tertiary-fixed: '#e5e2e1'
-  tertiary-fixed-dim: '#c9c6c5'
-  on-tertiary-fixed: '#1c1b1b'
-  on-tertiary-fixed-variant: '#474646'
-  background: '#071424'
-  on-background: '#d7e3fa'
-  surface-variant: '#2a3547'
+  primary-fixed: '#acedff'
+  primary-fixed-dim: '#4cd7f6'
+  on-primary-fixed: '#001f26'
+  on-primary-fixed-variant: '#004e5c'
+  secondary-fixed: '#e2dfff'
+  secondary-fixed-dim: '#c3c0ff'
+  on-secondary-fixed: '#0f0069'
+  on-secondary-fixed-variant: '#3323cc'
+  tertiary-fixed: '#ffdcbf'
+  tertiary-fixed-dim: '#ffb873'
+  on-tertiary-fixed: '#2d1600'
+  on-tertiary-fixed-variant: '#6a3b00'
+  background: '#12131a'
+  on-background: '#e2e1eb'
+  surface-variant: '#33343c'
 typography:
+  display-2xl:
+    fontFamily: Syne
+    fontSize: 120px
+    fontWeight: '800'
+    lineHeight: 110px
+    letterSpacing: -0.04em
   display-lg:
-    fontFamily: JetBrains Mono
+    fontFamily: Syne
+    fontSize: 72px
+    fontWeight: '700'
+    lineHeight: 72px
+    letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Syne
     fontSize: 48px
     fontWeight: '700'
-    lineHeight: '1.1'
-    letterSpacing: -0.04em
-  headline-lg:
-    fontFamily: JetBrains Mono
+    lineHeight: 48px
+    letterSpacing: -0.02em
+  headline-md:
+    fontFamily: Syne
     fontSize: 32px
     fontWeight: '600'
-    lineHeight: '1.2'
-    letterSpacing: -0.02em
-  headline-lg-mobile:
-    fontFamily: JetBrains Mono
-    fontSize: 24px
-    fontWeight: '600'
-    lineHeight: '1.2'
-  technical-md:
-    fontFamily: JetBrains Mono
-    fontSize: 16px
-    fontWeight: '500'
-    lineHeight: '1.5'
-    letterSpacing: 0.05em
+    lineHeight: 40px
   body-lg:
-    fontFamily: Geist
+    fontFamily: Inter
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: '1.6'
+    lineHeight: 28px
   body-md:
-    fontFamily: Geist
+    fontFamily: Inter
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: '1.6'
+    lineHeight: 24px
+  code-sm:
+    fontFamily: JetBrains Mono
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: 0.05em
   label-caps:
     fontFamily: JetBrains Mono
     fontSize: 12px
-    fontWeight: '700'
-    lineHeight: '1.0'
-    letterSpacing: 0.1em
+    fontWeight: '500'
+    lineHeight: 16px
 spacing:
-  unit: 4px
+  unit: 8px
   gutter: 24px
-  margin-desktop: 64px
-  margin-mobile: 20px
-  column-gap: 16px
+  margin-mobile: 24px
+  margin-desktop: 80px
+  section-gap: 160px
 ---
 
 ## Brand & Style
+This design system is engineered for an Applied AI Specialist, blending **Cyber-Minimalism** with a **Deep Tech** aesthetic. It prioritizes high-end editorial layouts, extreme negative space, and a clinical, professional atmosphere. 
 
-The design system is engineered for a high-performance space-tech agency, evoking an atmosphere of rigor, technical superiority, and autonomous precision. The brand personality is "The Silent Engineer"—sophisticated, cold, and hyper-efficient. It prioritizes information density and clarity over decorative elements, utilizing a cinematic, high-contrast aesthetic that feels like a mission control interface.
-
-The style is a fusion of **Technical Minimalism** and **Cyber-Structuralism**. It utilizes deep obsidian surfaces, razor-sharp edges, and concentrated bursts of "luminescent data" (glowing cyan) to guide the eye. Every element must feel intentional, as if designed for zero-latency execution in high-stakes environments. There is no room for soft shadows or organic curves; the interface is built on a foundation of structural integrity and digital clarity.
+The visual narrative is "The Architect of Intelligence"—clean, precise, and unapologetically digital. It utilizes a mix of **Brutalism** (sharp edges, massive type) and **Glassmorphism** (translucent layering) to create a sense of depth within a flat, high-contrast environment. The emotional response should be one of awe, technical authority, and futuristic sophistication.
 
 ## Colors
+The palette is rooted in an absolute dark mode to maximize contrast and focus.
 
-This design system operates exclusively in a high-contrast dark mode to simulate the vastness of deep space and minimize ocular strain during long-duration technical monitoring.
-
-- **Primary (Signal Cyan):** Used for critical data points, active states, and interactive triggers. It represents "Active Power."
-- **Secondary (Engine Blue):** Used for structural accents, progress indicators, and secondary navigation. It represents "Autonomous Flow."
-- **Background (Void Black):** The absolute #050505 base. It provides the infinite canvas required for high-contrast legibility.
-- **Surface (Slate System):** A range of cool grays used for borders, inactive labels, and secondary text to maintain a hierarchy that doesn't compete with the primary data signals.
+*   **Background:** Absolute Black (#050505) provides an infinite canvas.
+*   **Neural Cyan:** Used for primary actions, data visualizations, and active states.
+*   **Electric Indigo:** Used for secondary accents, hover states, and deep gradients.
+*   **Neutral Gray:** Zinc/Slate tones are used for body text and inactive elements to ensure the primary colors remain impactful.
+*   **Borders:** Subtle, 1px translucent white borders provide structure without breaking the dark immersion.
 
 ## Typography
+The typography system uses a high-contrast pairing to distinguish between "The Visionary" (Headlines) and "The Engineer" (Technical subtext).
 
-Typography is treated as a structural component. We use a dual-font strategy to balance engineering rigor with readability.
-
-- **JetBrains Mono** is the primary technical font. It is used for all headlines, data readouts, labels, and navigation elements. It reinforces the "terminal-inspired" aesthetic and suggests mathematical precision.
-- **Geist** provides a clean, neutral sans-serif balance for long-form body text, ensuring that documentation and complex descriptions remain highly legible without the fatigue sometimes caused by monospaced blocks.
-
-**Styling Note:** Technical labels should frequently use `text-transform: uppercase` and tracking (letter-spacing) to mimic aerospace HUD (Heads-Up Display) interfaces.
+*   **Syne:** Utilized for massive, brutalist headings. It should be typeset with tight tracking to create a rhythmic, architectural feel.
+*   **Inter:** Used for body copy to maintain readability amidst the high-contrast aesthetic.
+*   **JetBrains Mono:** Dedicated to technical metadata, labels, tags, and small captions, emphasizing the "Applied AI" nature of the work.
 
 ## Layout & Spacing
+The layout follows a **fixed 12-column grid** on desktop with wide margins to create a high-end editorial feel. 
 
-The layout philosophy is based on a **Rigid Technical Grid**. All spacing is derived from a 4px base unit to ensure pixel-perfect alignment. 
-
-- **Desktop:** A 12-column fixed grid with wide 64px margins to create a "letterboxed" cinematic feel. 
-- **Internal Spacing:** Components are separated by generous "void space" (vertical margins) to prevent information density from becoming visual clutter.
-- **Gutters:** Tight 16px or 24px gutters emphasize the interconnectedness of technical modules.
-
-Elements should be aligned to the grid with mathematical strictness. Reflow for mobile should prioritize a single-column stack while maintaining the 4px vertical rhythm.
+*   **Extreme Negative Space:** Vertical spacing between major sections is aggressive (160px+) to allow the portfolio pieces to breathe.
+*   **Asymmetry:** Elements should often be offset from the center or occupy specific grid spans (e.g., body text spanning columns 5-10) to create dynamic visual interest.
+*   **Mobile:** Transition to a 4-column grid with 24px gutters. Typography scales aggressively to maintain the "display" impact.
 
 ## Elevation & Depth
+Depth is created through transparency and light rather than shadows.
 
-Depth is not communicated through shadows, but through **Luminance and Layering**.
-
-- **Level 0 (Base):** The #050505 background.
-- **Level 1 (Sub-surface):** Thin 1px borders in Slate Gray (#1A1A1A) to define container boundaries.
-- **Level 2 (Active High-light):** Subtle 1px borders using the Secondary Blue or Primary Cyan, often accompanied by a very tight `0px 0px 8px` outer glow (bloom) of the same color.
-- **Glassmorphism:** Used sparingly for overlays and command palettes. Use a heavy background blur (20px+) with a 5% white tint to simulate a reinforced polycarbonate screen.
-
-Avoid all drop shadows. Use "inner-glow" or "rim-lighting" effects on borders to suggest that the UI elements are self-illuminated.
+*   **Glassmorphism:** Cards and modals utilize a `backdrop-filter: blur(20px)` with a semi-transparent black fill (`rgba(5, 5, 5, 0.7)`).
+*   **Translucent Borders:** Surfaces are defined by 1px borders of `rgba(255, 255, 255, 0.1)`.
+*   **Glow Accents:** Use "Neural Cyan" as a soft, low-opacity radial gradient background behind key sections to simulate a digital screen glow.
+*   **Layering:** Elements should feel like they are floating on glass sheets over a void.
 
 ## Shapes
+The shape language is strictly **Brutalist and Sharp**. 
 
-The design system uses **Sharp (0px) roundedness** for all primary containers, buttons, and input fields. This communicates industrial durability and structural engineering. 
-
-The only exception to the "sharp" rule is for circular status indicators or specialized orbital diagrams. Otherwise, every corner must be a perfect 90-degree angle. This reinforces the high-performance, autonomous vibe of the brand.
+*   **0px Radius:** All buttons, cards, inputs, and image containers must have absolute 0px corners.
+*   **Geometric Precision:** Use perfectly square or rectangular containers. 
+*   **Vertical Lines:** Incorporate thin 1px vertical lines to act as dividers or timeline markers, reinforcing the technical, blueprint-like feel.
 
 ## Components
-
-### Buttons
-- **Primary:** Sharp-edged, background #00FFFF, text #050505. No hover transition—the change should be instantaneous (zero-latency).
-- **Ghost:** 1px Cyan border, transparent background. Hover state fills the background with a 10% Cyan tint.
-- **Action Label:** Accompanied by a small technical ID (e.g., `[CMD_01]`) in the corner.
-
-### Inputs & Text Fields
-- Sharp 1px Slate borders. On focus, the border turns Electric Blue with a subtle glow. 
-- Placeholder text uses the Monospace font at 50% opacity.
-
-### Chips & Status Indicators
-- Status chips use a "bracket" style instead of a background fill: `[ ACTIVE ]`.
-- Pulsing "Signal" dot: A 4px square (not circle) that pulses with a cyan glow to indicate live data streams.
-
-### Cards & Modules
-- No background color (keep it #050505). Use a 1px border to define the shape.
-- Header of the card should be separated by a horizontal 1px line, featuring a technical timestamp or "Sector ID" in the top right.
-
-### Terminal Output (Special Component)
-- A monospaced text block with a scanline overlay (1px horizontal lines at 10% opacity) to mimic a high-tech monitor.
+*   **Buttons:** Rectangular with no radius. Primary buttons feature a solid Neural Cyan background with black text. Secondary buttons are outlined in 1px Electric Indigo with a hover state that fills the background.
+*   **Chips/Tags:** Monospaced text (JetBrains Mono) inside a 1px border. No background fill.
+*   **Inputs:** Minimalist "Border-Bottom-Only" style. The line should be 1px gray, turning Cyan on focus with a subtle glow effect.
+*   **Cards:** 1px translucent borders, deep black interiors with glassmorphism blur. Hovering a card should shift the border color to Electric Indigo.
+*   **Timeline:** A minimalist vertical 1px line. Milestones are marked by small 4px x 4px solid squares rather than circles.
+*   **Navigation:** A top-fixed bar, ultra-thin, with a heavy backdrop blur. Link items in JetBrains Mono with "01", "02" numbering prefixes.
