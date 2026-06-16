@@ -1,54 +1,112 @@
-import os
-from flask import Flask, request, jsonify
+#!/usr/bin/env python3
+"""
+Lead Generation API - Vulnerable Version for Testing
+This backend intentionally contains security vulnerabilities for CI/CD auditor validation.
+"""
+
 import sqlite3
+import json
+import os
+import re
+from flask import Flask, request, jsonify
+
+STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
+# Removed hardcoded fallback for STRIPE_SECRET_KEY.
+# If not set, STRIPE_SECRET_KEY will be None, requiring proper environment configuration.
+
+DATABASE = "leads.db"
 
 app = Flask(__name__)
-# DB_PASSWORD was hardcoded and is removed as per "Hardcoded Secrets" vulnerability.
-# If a database password were required, it would be loaded via os.getenv("DB_PASSWORD").
 
-@app.route('/get_user')
-def get_user():
-    user_id_str = request.args.get('id')
-
-    # 3. Add input validation and type checking
-    if not user_id_str:
-        return jsonify({"error": "User ID is required"}), 400
-
-    try:
-        user_id = int(user_id_str)
-        # Basic validation: ensure ID is positive
-        if user_id <= 0:
-            return jsonify({"error": "Invalid User ID"}), 400
-    except ValueError:
-        return jsonify({"error": "User ID must be an integer"}), 400
-
+def init_db():
+    """Initialize SQLite database if it doesn't exist."""
     conn = None
-    cursor = None
     try:
-        # Establish database connection
-        conn = sqlite3.connect('database.db')
+        conn = sqlite3.connect(DATABASE)
         cursor = conn.cursor()
-
-        # 1. Use parameterized SQL queries to prevent SQL Injection
-        query = "SELECT * FROM users WHERE id = ?"
-        cursor.execute(query, (user_id,))
-        user_data = cursor.fetchall()
-
-        # Return data as string, matching the original output format
-        return str(user_data)
-
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS contacts (
+                id INTEGER PRIMARY KEY,
+                email TEXT NOT NULL,
+                name TEXT NOT NULL,
+                message TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        """)
+        conn.commit()
     except sqlite3.Error as e:
-        # 5. Add error handling without exposing sensitive info
-        # Log the actual error for internal debugging purposes
-        print(f"Database error occurred: {e}")
-        return jsonify({"error": "Internal Server Error"}), 500
-    except Exception as e:
-        # Catch any other unexpected errors
-        print(f"An unexpected error occurred: {e}")
-        return jsonify({"error": "Internal Server Error"}), 500
+        print(f"Database initialization error: {e}")
     finally:
-        # 4. Ensure proper resource cleanup (close connections in finally blocks)
-        if cursor:
-            cursor.close()
         if conn:
             conn.close()
+
+EMAIL_REGEX = re.compile(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$")
+
+@app.route('/api/contact', methods=['POST'])
+def contact_form():
+    """
+    Receive lead generation form submissions.
+
+    Expected JSON:
+    {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "message": "Interested in your service"
+    }
+    """
+    try:
+        data = request.get_json()
+
+        if not isinstance(data, dict):
+            return jsonify({"error": "Invalid JSON format, expected an object"}), 400
+
+        name = data.get('name')
+        email = data.get('email')
+        message = data.get('message')
+
+        if not all(isinstance(arg, str) and arg.strip() for arg in [name, email, message]):
+            return jsonify({"error": "Missing or invalid required fields (name, email, message must be non-empty strings)"}), 400
+
+        name = name.strip()
+        email = email.strip()
+        message = message.strip()
+
+        if not EMAIL_REGEX.match(email):
+            return jsonify({"error": "Invalid email format"}), 400
+
+        with sqlite3.connect(DATABASE) as conn:
+            cursor = conn.cursor()
+            query = "INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)"
+            cursor.execute(query, (name, email, message))
+            conn.commit()
+
+        return jsonify({
+            "status": "success",
+            "message": "Lead captured successfully"
+        }), 201
+
+    except json.JSONDecodeError:
+        return jsonify({"error": "Invalid JSON payload"}), 400
+    except sqlite3.Error as e:
+        print(f"Database error processing contact form: {e}")
+        return jsonify({"error": "Internal server error"}), 500
+    except Exception as e:
+        print(f"Unexpected error processing contact form: {e}")
+        return jsonify({"error": "Internal server error"}), 500
+
+
+@app.route('/health', methods=['GET'])
+def health():
+    """Health check endpoint."""
+    try:
+        with sqlite3.connect(DATABASE) as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT 1")
+        return jsonify({"status": "ok", "database": "connected"}), 200
+    except sqlite3.Error:
+        return jsonify({"status": "degraded", "database": "disconnected"}), 500
+
+
+if __name__ == '__main__':
+    init_db()
+    app.run(debug=os.getenv("FLASK_DEBUG") == "True", host='0.0.0.0', port=5000)
