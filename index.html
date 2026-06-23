@@ -1,481 +1,658 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RGDETAILING — Elite paint correction and ceramic coating specialists in North Geelong, Victoria. Premium protection for your vehicle.">
+  <title>RGDETAILING — Elite Detailing, North Geelong</title>
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Chaiverse - Modern Heritage Indian Cafe</title>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-variant": "#f1dfd3",
-                        "on-tertiary": "#ffffff",
-                        "on-primary-container": "#693800",
-                        "on-tertiary-fixed": "#1c1b1b",
-                        "secondary-fixed": "#ffdf98",
-                        "secondary": "#775a00",
-                        "surface-tint": "#8f4e00",
-                        "inverse-primary": "#ffb77a",
-                        "primary": "#8f4e00",
-                        "primary-fixed": "#ffdcc2",
-                        "surface-container-low": "#fff1e8",
-                        "surface-container-lowest": "#ffffff",
-                        "on-secondary-fixed-variant": "#5a4300",
-                        "primary-fixed-dim": "#ffb77a",
-                        "on-primary-fixed": "#2e1500",
-                        "on-tertiary-container": "#444444",
-                        "inverse-surface": "#392e27",
-                        "surface": "#fff8f5",
-                        "on-secondary-container": "#6f5400",
-                        "secondary-container": "#fec72b",
-                        "surface-dim": "#e8d7cb",
-                        "tertiary-fixed-dim": "#c8c6c5",
-                        "on-primary-fixed-variant": "#6d3a00",
-                        "outline-variant": "#dbc2b0",
-                        "on-secondary-fixed": "#251a00",
-                        "on-tertiary-fixed-variant": "#474746",
-                        "inverse-on-surface": "#ffeee2",
-                        "surface-container-highest": "#f1dfd3",
-                        "on-surface": "#231a13",
-                        "on-background": "#231a13",
-                        "surface-container": "#fdebdf",
-                        "outline": "#887364",
-                        "surface-container-high": "#f7e5d9",
-                        "on-error": "#ffffff",
-                        "on-error-container": "#93000a",
-                        "surface-bright": "#fff8f5",
-                        "tertiary-container": "#b3b1b1",
-                        "background": "#fff8f5",
-                        "on-secondary": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "on-primary": "#ffffff",
-                        "tertiary": "#5f5e5e",
-                        "tertiary-fixed": "#e5e2e1",
-                        "primary-container": "#ff9933",
-                        "secondary-fixed-dim": "#f5bf21",
-                        "error": "#ba1a1a",
-                        "on-surface-variant": "#554336"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "2xl": "1rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "base": "8px",
-                        "sm": "12px",
-                        "md": "24px",
-                        "xl": "80px",
-                        "container-margin": "24px",
-                        "gutter": "16px",
-                        "xs": "4px",
-                        "lg": "48px"
-                    },
-                    "fontFamily": {
-                        "headline-md": ["Bricolage Grotesque"],
-                        "display": ["Bricolage Grotesque"],
-                        "label-md": ["Be Vietnam Pro"],
-                        "headline-lg-mobile": ["Bricolage Grotesque"],
-                        "body-lg": ["Be Vietnam Pro"],
-                        "body-md": ["Be Vietnam Pro"],
-                        "headline-lg": ["Bricolage Grotesque"]
-                    },
-                    "fontSize": {
-                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "display": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
-                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
-                        "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }]
-                    },
-                    "boxShadow": {
-                        "ambient": "0 8px 24px -4px rgba(26, 26, 26, 0.08), 0 4px 12px -2px rgba(255, 153, 51, 0.05)",
-                        "ambient-hover": "0 12px 32px -4px rgba(26, 26, 26, 0.12), 0 8px 16px -2px rgba(255, 153, 51, 0.08)"
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        body { background-color: #FDFBF7; color: #1A1A1A; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .material-symbols-outlined[data-weight="fill"] { font-variation-settings: 'FILL' 1; }
-        
-        /* Ambient Warm Shadow Logic mapped to Tailwind config */
-        .ambient-shadow { box-shadow: 0 8px 24px -4px rgba(26, 26, 26, 0.08), 0 4px 12px -2px rgba(255, 153, 51, 0.05); }
-        .ambient-shadow-hover:hover { box-shadow: 0 12px 32px -4px rgba(26, 26, 26, 0.12), 0 8px 16px -2px rgba(255, 153, 51, 0.08); transform: translateY(-2px); transition: all 0.3s ease; }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md overflow-x-hidden">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30 flat no shadows transition-all duration-300" id="global-nav">
-<div class="flex justify-between items-center px-container-margin py-base max-w-7xl mx-auto">
-<a class="font-display text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight" href="#">Chaiverse</a>
-<nav class="hidden md:flex items-center space-x-md">
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md uppercase" href="#menu">Menu</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md uppercase" href="#catering">Catering</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md uppercase" href="#story">Our Story</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md uppercase" href="#locations">Locations</a>
-</nav>
-<button class="bg-primary-container text-on-primary-container font-label-md text-label-md uppercase px-md py-sm rounded-full hover:opacity-80 transition-all active:scale-95 duration-150 min-h-[48px] flex items-center justify-center ambient-shadow ambient-shadow-hover hidden md:flex">
-                Order Now
+<body>
+
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================================ -->
+  <!-- PRELOADER                                                     -->
+  <!-- ============================================================ -->
+  <div id="preloader" role="status" aria-label="Loading RGDETAILING">
+    <div class="preloader-inner">
+      <div class="preloader-logo" aria-hidden="true">
+        <span class="pl-rg">RG</span><span class="pl-sep">/</span><span class="pl-detail">DETAILING</span>
+      </div>
+      <div class="preloader-track" aria-hidden="true">
+        <div class="preloader-fill" id="preloader-fill"></div>
+      </div>
+      <div class="preloader-location" aria-hidden="true">NORTH GEELONG · VICTORIA</div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- NAVIGATION                                                    -->
+  <!-- ============================================================ -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="RGDETAILING home">
+        <span class="logo-rg">RG</span><span class="logo-slash">/</span><span class="logo-word">DETAILING</span>
+      </a>
+      <div class="nav-links">
+        <a href="#packages" class="nav-link">PACKAGES</a>
+        <a href="#process" class="nav-link">PROCESS</a>
+        <a href="#quote" class="nav-cta" aria-label="Get a quote from RGDETAILING">GET A QUOTE</a>
+      </div>
+      <button class="nav-burger" id="nav-burger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" role="menu" aria-hidden="true">
+      <a href="#packages" class="nav-mobile-link" role="menuitem">PACKAGES</a>
+      <a href="#process" class="nav-mobile-link" role="menuitem">PROCESS</a>
+      <a href="#quote" class="nav-mobile-link nav-mobile-cta" role="menuitem">GET A QUOTE</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- HERO                                                          -->
+  <!-- ============================================================ -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="hero-grid-overlay" aria-hidden="true"></div>
+    <div class="hero-noise" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow" aria-label="Location">
+        <span class="eyebrow-pulse" aria-hidden="true"></span>
+        NORTH GEELONG · VICTORIA
+      </div>
+
+      <h1 id="hero-heading" class="hero-title">
+        <span class="title-line">ELITE</span>
+        <span class="title-line title-accent">DETAILING</span>
+        <span class="title-line">FOR GEELONG</span>
+      </h1>
+
+      <p class="hero-sub">
+        Paint Correction &amp; Ceramic Coating Specialists.<br>
+        Precision-engineered protection for every vehicle.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#quote" class="btn-primary">
+          GET A QUOTE
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#packages" class="btn-secondary">VIEW PACKAGES</a>
+      </div>
+    </div>
+
+    <div class="hero-stats" aria-label="Key statistics">
+      <div class="stat">
+        <span class="stat-num" aria-label="Over 500 vehicles protected">500+</span>
+        <span class="stat-label">VEHICLES PROTECTED</span>
+      </div>
+      <div class="stat-rule" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat-num" aria-label="Up to 7 year coating warranty">7YR</span>
+        <span class="stat-label">MAX COATING WARRANTY</span>
+      </div>
+      <div class="stat-rule" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat-num" aria-label="100 percent satisfaction guarantee">100%</span>
+        <span class="stat-label">SATISFACTION GUARANTEE</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span class="scroll-label">SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- MARQUEE STRIP                                                 -->
+  <!-- ============================================================ -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>PAINT CORRECTION</span>
+      <span class="marquee-sep">·</span>
+      <span>CERAMIC COATING</span>
+      <span class="marquee-sep">·</span>
+      <span>PAINT PROTECTION FILM</span>
+      <span class="marquee-sep">·</span>
+      <span>INTERIOR DETAILING</span>
+      <span class="marquee-sep">·</span>
+      <span>PAINT DECONTAMINATION</span>
+      <span class="marquee-sep">·</span>
+      <span>GLASS COATING</span>
+      <span class="marquee-sep">·</span>
+      <span>PAINT CORRECTION</span>
+      <span class="marquee-sep">·</span>
+      <span>CERAMIC COATING</span>
+      <span class="marquee-sep">·</span>
+      <span>PAINT PROTECTION FILM</span>
+      <span class="marquee-sep">·</span>
+      <span>INTERIOR DETAILING</span>
+      <span class="marquee-sep">·</span>
+      <span>PAINT DECONTAMINATION</span>
+      <span class="marquee-sep">·</span>
+      <span>GLASS COATING</span>
+      <span class="marquee-sep">·</span>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- PACKAGES — BENTO GRID                                        -->
+  <!-- ============================================================ -->
+  <section id="packages" aria-labelledby="packages-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label">
+          <span class="label-line" aria-hidden="true"></span>
+          CERAMIC COATING PACKAGES
+        </div>
+        <h2 id="packages-heading" class="section-title">
+          PRECISION-ENGINEERED<br>PROTECTION
+        </h2>
+        <p class="section-sub">Three tiers of uncompromising paint protection. Each package begins with a full paint decontamination and inspection before any coating is applied.</p>
+      </div>
+
+      <div class="bento-grid" role="list">
+
+        <!-- CARD 1: CERAMIC LITE -->
+        <article class="package-card" role="listitem" aria-labelledby="pkg1-name">
+          <div class="card-tier">TIER 01</div>
+          <div class="card-header">
+            <h3 id="pkg1-name" class="card-name">CERAMIC LITE</h3>
+            <div class="card-price">
+              <span class="price-from">FROM</span>
+              <span class="price-amount">$999</span>
+            </div>
+          </div>
+          <p class="card-desc">Single-stage paint correction followed by a 1-year entry ceramic coating. Ideal for newer vehicles needing light swirl removal and baseline hydrophobic protection.</p>
+          <ul class="card-inclusions" aria-label="Package inclusions">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Full paint decontamination
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Single-stage machine polish
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              1-year ceramic coating
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Hydrophobic glass coating
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Tyre &amp; trim dressing
+            </li>
+          </ul>
+          <div class="card-duration">
+            <span class="duration-label">DURATION</span>
+            <span class="duration-value">1–2 DAYS</span>
+          </div>
+          <a href="#quote" class="card-cta" aria-label="Get a quote for Ceramic Lite package">GET A QUOTE →</a>
+        </article>
+
+        <!-- CARD 2: CERAMIC PRO (FEATURED) -->
+        <article class="package-card package-card--featured" role="listitem" aria-labelledby="pkg2-name">
+          <div class="card-badge">MOST POPULAR</div>
+          <div class="card-tier">TIER 02</div>
+          <div class="card-header">
+            <h3 id="pkg2-name" class="card-name">CERAMIC PRO</h3>
+            <div class="card-price">
+              <span class="price-from">FROM</span>
+              <span class="price-amount">$1,899</span>
+            </div>
+          </div>
+          <p class="card-desc">Two-stage paint correction removes up to 90% of swirls and light scratches, followed by a professional-grade 3-year ceramic coating with enhanced chemical resistance.</p>
+          <ul class="card-inclusions" aria-label="Package inclusions">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Full decontamination + clay bar
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Two-stage machine correction
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              3-year professional ceramic coating
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Hydrophobic glass + trim coating
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Full interior vacuum &amp; wipe-down
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Paint thickness readings report
+            </li>
+          </ul>
+          <div class="card-duration">
+            <span class="duration-label">DURATION</span>
+            <span class="duration-value">2–3 DAYS</span>
+          </div>
+          <a href="#quote" class="card-cta card-cta--featured" aria-label="Get a quote for Ceramic Pro package">GET A QUOTE →</a>
+        </article>
+
+        <!-- CARD 3: APEX CERAMIC -->
+        <article class="package-card" role="listitem" aria-labelledby="pkg3-name">
+          <div class="card-tier">TIER 03</div>
+          <div class="card-header">
+            <h3 id="pkg3-name" class="card-name">APEX CERAMIC</h3>
+            <div class="card-price">
+              <span class="price-from">FROM</span>
+              <span class="price-amount">$2,999</span>
+            </div>
+          </div>
+          <p class="card-desc">The ultimate protection package. Multi-stage paint correction to achieve near-perfect paint clarity, topped with our highest-grade 7-year ceramic coating and full interior restoration.</p>
+          <ul class="card-inclusions" aria-label="Package inclusions">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Full decontamination + iron removal
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              3-stage multi-step correction
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              7-year elite ceramic coating
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Full glass + trim + wheel coating
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Interior deep clean + leather treatment
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Full paint report + before/after photos
+            </li>
+          </ul>
+          <div class="card-duration">
+            <span class="duration-label">DURATION</span>
+            <span class="duration-value">3–5 DAYS</span>
+          </div>
+          <a href="#quote" class="card-cta" aria-label="Get a quote for Apex Ceramic package">GET A QUOTE →</a>
+        </article>
+
+      </div>
+
+      <p class="packages-note">All pricing is indicative. Final quotes depend on vehicle size, paint condition, and current contamination. <a href="#quote">Book a free inspection</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PROCESS                                                       -->
+  <!-- ============================================================ -->
+  <section id="process" aria-labelledby="process-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label">
+          <span class="label-line" aria-hidden="true"></span>
+          OUR METHOD
+        </div>
+        <h2 id="process-heading" class="section-title">THE PRECISION<br>PROCESS</h2>
+      </div>
+
+      <div class="process-grid" role="list">
+        <div class="process-step" role="listitem">
+          <div class="step-number" aria-hidden="true">01</div>
+          <div class="step-content">
+            <h3 class="step-title">PAINT ASSESSMENT</h3>
+            <p class="step-desc">Every vehicle begins with a comprehensive paint thickness gauge reading and swirl assessment under controlled LED lighting. We document baseline condition before any work begins.</p>
+          </div>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step" role="listitem">
+          <div class="step-number" aria-hidden="true">02</div>
+          <div class="step-content">
+            <h3 class="step-title">DECONTAMINATION</h3>
+            <p class="step-desc">Chemical decontamination with a pH-neutral wash, followed by iron fallout remover and a full clay bar treatment to achieve a microscopically clean surface before machine work.</p>
+          </div>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step" role="listitem">
+          <div class="step-number" aria-hidden="true">03</div>
+          <div class="step-content">
+            <h3 class="step-title">CORRECTION &amp; COATING</h3>
+            <p class="step-desc">Machine polishing removes oxidation, swirl marks, and light scratches. The vehicle is IPA wiped and coated in a controlled environment to maximise ceramic bond strength and longevity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- QUOTE FORM                                                    -->
+  <!-- ============================================================ -->
+  <section id="quote" aria-labelledby="quote-heading">
+    <div class="section-container">
+      <div class="quote-layout">
+        <div class="quote-info">
+          <div class="section-label">
+            <span class="label-line" aria-hidden="true"></span>
+            BOOK YOUR DETAIL
+          </div>
+          <h2 id="quote-heading" class="section-title">GET A<br>QUOTE</h2>
+          <p class="section-sub">We respond to all quote requests within 24 hours. Alternatively, call us directly during business hours.</p>
+          <div class="quote-contact">
+            <div class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13.5 10.5L11 13C8 13 3 8 3 5L5.5 2.5L7.5 5L6 6.5C7 8 8 9 9.5 10L11 8.5L13.5 10.5Z" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>0400 000 000</span>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="2" y="4" width="12" height="9" rx="0" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <path d="M2 4L8 9L14 4" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-linecap="round"/>
+              </svg>
+              <span>hello@rgdetailing.com.au</span>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5Z" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <circle cx="8" cy="6" r="1.5" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+              </svg>
+              <span>North Geelong, VIC 3215</span>
+            </div>
+          </div>
+          <div class="quote-hours">
+            <div class="hours-label">BUSINESS HOURS</div>
+            <div class="hours-row"><span>Mon – Fri</span><span>8:00am – 6:00pm</span></div>
+            <div class="hours-row"><span>Saturday</span><span>9:00am – 4:00pm</span></div>
+            <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+          </div>
+        </div>
+
+        <div class="quote-form-wrap">
+          <form id="quote-form" novalidate aria-label="Quote request form">
+            <input type="hidden" id="csrf-token" name="csrf_token" value="">
+
+            <div id="form-success" class="form-success" role="alert" aria-live="polite" hidden>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10L8 14L16 6" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Quote request received. We'll contact you within 24 hours.
+            </div>
+            <div id="form-error" class="form-error-banner" role="alert" aria-live="assertive" hidden></div>
+
+            <div class="form-row form-row--two">
+              <div class="form-group">
+                <label for="f-name" class="form-label">Full Name <span class="required" aria-label="required">*</span></label>
+                <input type="text" id="f-name" name="name" class="form-input" autocomplete="name" required minlength="2" maxlength="100" aria-describedby="f-name-error" placeholder="James Wilson">
+                <span id="f-name-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="f-email" class="form-label">Email Address <span class="required" aria-label="required">*</span></label>
+                <input type="email" id="f-email" name="email" class="form-input" autocomplete="email" required maxlength="254" aria-describedby="f-email-error" placeholder="james@example.com">
+                <span id="f-email-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row form-row--two">
+              <div class="form-group">
+                <label for="f-phone" class="form-label">Phone Number <span class="required" aria-label="required">*</span></label>
+                <input type="tel" id="f-phone" name="phone" class="form-input" autocomplete="tel" required maxlength="20" aria-describedby="f-phone-error" placeholder="0412 345 678">
+                <span id="f-phone-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="f-vehicle" class="form-label">Vehicle <span class="required" aria-label="required">*</span></label>
+                <input type="text" id="f-vehicle" name="vehicle" class="form-input" required minlength="2" maxlength="100" aria-describedby="f-vehicle-error" placeholder="2022 BMW M4 Competition">
+                <span id="f-vehicle-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="f-package" class="form-label">Preferred Package <span class="required" aria-label="required">*</span></label>
+              <div class="select-wrap">
+                <select id="f-package" name="package" class="form-input form-select" required aria-describedby="f-package-error">
+                  <option value="" disabled selected>Select a package</option>
+                  <option value="CERAMIC_LITE">Ceramic Lite — from $999</option>
+                  <option value="CERAMIC_PRO">Ceramic Pro — from $1,899</option>
+                  <option value="APEX_CERAMIC">Apex Ceramic — from $2,999</option>
+                </select>
+                <svg class="select-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span id="f-package-error" class="field-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-message" class="form-label">Additional Notes <span class="form-optional">(optional)</span></label>
+              <textarea id="f-message" name="message" class="form-input form-textarea" rows="4" maxlength="500" aria-describedby="f-message-hint f-message-count" placeholder="Describe your vehicle's current paint condition, any specific concerns, or preferred dates..."></textarea>
+              <div class="textarea-footer">
+                <span id="f-message-hint" class="field-hint">Max 500 characters</span>
+                <span id="f-message-count" class="char-count" aria-live="polite">0 / 500</span>
+              </div>
+            </div>
+
+            <button type="submit" class="form-submit" id="form-submit" aria-label="Submit quote request">
+              <span class="submit-text">SUBMIT QUOTE REQUEST</span>
+              <span class="submit-loading" aria-hidden="true" hidden>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="spin"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5" stroke-dasharray="32" stroke-dashoffset="10"/></svg>
+                SENDING…
+              </span>
             </button>
-<button class="md:hidden text-primary p-2 material-symbols-outlined" data-icon="menu">menu</button>
-</div>
-</header>
-<main class="flex-grow pt-24 pb-xl">
-<!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-container-margin mt-md md:mt-xl mb-xl">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-md items-center">
-<div class="md:col-span-6 space-y-md z-10 relative">
-<h1 class="font-display text-headline-lg-mobile md:text-display text-[#1A1A1A] leading-tight">
-                        AUTHENTIC INDIAN STREET FOOD.<br/>
-<span class="text-primary">POURING NOW IN GEELONG.</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-                        Experience the vibrant energy of Mumbai streets paired with the refined comfort of a modern cafe. Aromatic chai, bold spices, and a community gathered.
-                    </p>
-<div class="pt-sm">
-<button class="bg-[#FF9933] text-[#1A1A1A] font-label-md text-label-md uppercase px-xl py-sm rounded-full hover:bg-opacity-90 transition-all active:scale-95 duration-150 min-h-[48px] flex items-center justify-center ambient-shadow ambient-shadow-hover inline-flex gap-2">
-<span class="material-symbols-outlined" data-icon="local_mall" data-weight="fill">local_mall</span>
-                            Order Pickup
-                        </button>
-</div>
-</div>
-<div class="md:col-span-6 mt-md md:mt-0 relative">
-<div class="rounded-2xl overflow-hidden ambient-shadow aspect-[1.79] w-full">
-<img alt="Dramatic close-up of masala chai pouring" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPRjzadzBwG7wEW7s-0-K0RaOarheW1NA_3s7AbCPNII4nUB8C-ySZRpAmaiRHhAKIX5L9dPoII-VeYGVgpY2hhHN_nmg-DgDbAto_DXe5yTJ7aqAcdGEWZDm_vawto0QWx51CC781YW-AtKkRGors4PK_Bv3K2M6t9UHmZvBqBLlwdDr-7af9eng0qIYNfjx57FZ2iVxWtfCfc6PTquyiR48WFGVrDKFszxZU71QioIC_Adu0VIUw0SWsuyQsuUvHr7LBzzFZh4A"/>
-</div>
-<!-- Decorative subtle element -->
-<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl -z-10"></div>
-</div>
-</div>
-</section>
-<!-- The Combos (Bento Grid) -->
-<section class="max-w-7xl mx-auto px-container-margin py-xl" id="menu">
-<div class="mb-lg flex justify-between items-end border-b border-outline-variant/30 pb-sm">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-[#1A1A1A]">The Signatures</h2>
-<a class="font-label-md text-label-md text-primary uppercase flex items-center gap-1 hover:opacity-80 transition-opacity" href="#">View Full Menu <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
-<!-- Bombay Special (Large Bento Item) -->
-<div class="md:col-span-2 rounded-2xl bg-surface border border-[#E5E1DA] overflow-hidden ambient-shadow ambient-shadow-hover flex flex-col md:flex-row group cursor-pointer h-full min-h-[300px]">
-<div class="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden">
-<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>
-<img alt="Bombay Special Spread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A top-down view of a lavish Bombay street food spread featuring pav bhaji, various chutneys, and a classic cutting chai glass. The scene is set on a worn, rustic wooden table with soft, warm natural light filtering through, evoking a high-end modern cafe ambiance. Golden hour lighting highlights the rich reds and vibrant greens of the dishes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy4IQ0A6FByQNJ_3F1DyDepD70u_hZQC2b6ve5qZ3U5NNg3oOo-FgSdh3iI36N7RK3Yr1Z_ehE-d7iXEMo1xax8CThXnYQ9nuq_lr3n_AZn4ZkGs4JNRitTI6Ov6COdO4Nh2IFeQNfHSyO2XGebWoV_lNk6Bg9UOBPvUbYhwc1pEjIUioVYL_io-C2kTKLYaFMIeGK8l5p-8hJybrZOWsNRMF7XIuKXkufj426zrSvgM1MNcc1N546wx-NNgfWE72uybMtwa5ch2g"/>
-<div class="absolute top-4 left-4 z-20 bg-secondary-container text-on-secondary-container font-label-md text-label-md uppercase px-3 py-1 rounded-full text-xs">Popular</div>
-</div>
-<div class="p-md flex flex-col justify-between w-full md:w-1/2 h-full bg-[#FDFBF7]">
-<div>
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-md text-headline-md text-[#1A1A1A]">Bombay Special</h3>
-<span class="font-headline-md text-headline-md text-primary">$18</span>
-</div>
-<p class="text-on-surface-variant mb-4">The ultimate street experience. Masala Pav, Bun Maska, and our signature Kadak Chai. A symphony of textures.</p>
-<div class="flex gap-2 flex-wrap">
-<span class="px-2 py-1 bg-surface-variant text-on-surface-variant text-xs rounded-sm font-label-md uppercase">Vegetarian</span>
-<span class="px-2 py-1 bg-surface-variant text-on-surface-variant text-xs rounded-sm font-label-md uppercase">Spicy</span>
-</div>
-</div>
-<button class="mt-4 w-full border border-[#1A1A1A] text-[#1A1A1A] font-label-md text-label-md uppercase py-sm rounded-full hover:bg-[#1A1A1A] hover:text-white transition-colors h-12 flex items-center justify-center gap-2">
-<span class="material-symbols-outlined" data-icon="add">add</span> Add to Order
-                        </button>
-</div>
-</div>
-<!-- Vada Pav (Tall Bento Item) -->
-<div class="md:col-span-1 rounded-2xl bg-surface border border-[#E5E1DA] overflow-hidden ambient-shadow ambient-shadow-hover flex flex-col group cursor-pointer h-full">
-<div class="h-48 md:h-64 w-full relative overflow-hidden">
-<img alt="Vada Pav" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOh9ukvGRRQ6gj1ksm7Ynsv5DBM2pl2gp9sbYpKmSk_G02q5BBXF4ajfTMJevG1hkTb7-I-UcCeWAvJYprXBDQ6386pAZvFVvEtmlv42HdZYU_oPKCSpjvT-FyLVv-wdl-dClJg_GOJ5NmGlkupXFKBjfSrQG-YlIxlFHMxiot0VnXKk9BBMjM2PQlem8FW3Sgby9lQXM9c_lpEhp_kdbfPJrBLvK5OvCu84Rr4N9N2kvJVFIhIU8B-1zfB2kw4QWL_XzWAAWFQw0"/>
-</div>
-<div class="p-md flex flex-col justify-between flex-grow bg-[#FDFBF7]">
-<div>
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-md text-headline-md text-[#1A1A1A]">Vada Pav</h3>
-<span class="font-headline-md text-headline-md text-primary">$9</span>
-</div>
-<p class="text-on-surface-variant mb-4 text-sm">Spiced potato dumpling, toasted bun, fiery garlic chutney.</p>
-</div>
-<button class="mt-4 w-full border border-[#1A1A1A] text-[#1A1A1A] font-label-md text-label-md uppercase py-sm rounded-full hover:bg-[#1A1A1A] hover:text-white transition-colors h-12">
-                            Add
-                        </button>
-</div>
-</div>
-<!-- Bun Maska -->
-<div class="md:col-span-1 rounded-2xl bg-surface border border-[#E5E1DA] p-md ambient-shadow ambient-shadow-hover flex flex-col justify-between group cursor-pointer h-full bg-[#FDFBF7]">
-<div>
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-md text-headline-md text-[#1A1A1A]">Bun Maska</h3>
-<span class="font-headline-md text-headline-md text-primary">$6</span>
-</div>
-<p class="text-on-surface-variant mb-4 text-sm">Soft fruit bun slathered in butter. Perfect for dipping in Chai.</p>
-</div>
-<button class="mt-4 w-full bg-surface-variant text-on-surface-variant font-label-md text-label-md uppercase py-sm rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors h-12">
-                        Add
-                    </button>
-</div>
-<!-- Mumbai Feast -->
-<div class="md:col-span-2 rounded-2xl bg-surface border border-[#E5E1DA] p-md ambient-shadow ambient-shadow-hover flex flex-col justify-between group cursor-pointer h-full bg-[#FDFBF7] relative overflow-hidden">
-<div class="absolute right-0 bottom-0 w-32 h-32 opacity-10 pointer-events-none transform translate-x-4 translate-y-4 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[120px]" data-icon="restaurant">restaurant</span>
-</div>
-<div class="relative z-10">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-md text-headline-md text-[#1A1A1A]">Mumbai Feast for Two</h3>
-<span class="font-headline-md text-headline-md text-primary">$45</span>
-</div>
-<p class="text-on-surface-variant mb-4 max-w-md">A curated selection of our best. 2x Vada Pav, 2x Samosa Chaat, large fries, and two large Kulhad Chais.</p>
-<!-- Classic Cafe Menu Dot Leader style list -->
-<div class="mt-4 space-y-2 font-display text-sm text-[#1A1A1A] max-w-sm border-t border-outline-variant/30 pt-4 hidden md:block">
-<div class="flex items-end"><span>Vada Pav (x2)</span><span class="flex-grow border-b border-dotted border-[#1A1A1A]/30 mx-2 mb-1"></span><span>Incl.</span></div>
-<div class="flex items-end"><span>Samosa Chaat (x2)</span><span class="flex-grow border-b border-dotted border-[#1A1A1A]/30 mx-2 mb-1"></span><span>Incl.</span></div>
-<div class="flex items-end"><span>Kulhad Chai (x2)</span><span class="flex-grow border-b border-dotted border-[#1A1A1A]/30 mx-2 mb-1"></span><span>Incl.</span></div>
-</div>
-</div>
-<button class="mt-4 w-auto self-start border border-[#1A1A1A] text-[#1A1A1A] font-label-md text-label-md uppercase px-8 py-sm rounded-full hover:bg-[#1A1A1A] hover:text-white transition-colors h-12 relative z-10">
-                        Order Feast
-                    </button>
-</div>
-</div>
-</section>
-<!-- The Culture (50/50 Split) -->
-<section class="max-w-7xl mx-auto px-container-margin py-xl" id="story">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden ambient-shadow">
-<div class="h-96 md:h-auto relative">
-<img alt="Artistic shot of traditional Indian spices" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS216gFpX_fz1Lu9xc8fVPCIWvfiz8cm1SkgdK8q-c0BZMBLeqCSMUm33ipVFFzZcD7zcQg_5_Z4x8uBoF98dfDfOoooC3L2xMYz-jGZpXZo55Gcsy1ADq2gK9NW0OczTYBzrpZuKEXcVJOV08IcUh5GahbTD8d7PYsfapcB6lHeZWsz6px9YDIVUESEz5CGhRXoWuPQbU_MGjw4qnAtgHcJ2uUxL8ykcLlB0F8u-qeSzLWgNXFVUGfJ8VKiLT_SmlPO2rI644F1s"/>
-</div>
-<div class="bg-[#FDFBF7] p-lg md:p-xl flex flex-col justify-center border-y border-r border-[#E5E1DA] md:border-l-0 border-l rounded-b-2xl md:rounded-bl-none md:rounded-r-2xl">
-<span class="font-label-md text-label-md text-primary uppercase mb-4 tracking-widest">Our Heritage</span>
-<h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-[#1A1A1A] mb-md leading-tight">
-                        Crafted with uncompromising authenticity.
-                    </h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-                        We don't do shortcuts. Every cup of chai is brewed using whole, freshly ground spices—cinnamon, cardamom, and clove—simmered slowly to extract maximum flavor. 
-                    </p>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                        Our food menu is a direct homage to the bustling street carts of Mumbai, elevated with premium local Geelong ingredients and presented with the care of a modern editorial kitchen. It's the tactile energy of India, poured into a cup.
-                    </p>
-<a class="inline-flex items-center gap-2 font-label-md text-label-md text-[#1A1A1A] uppercase hover:text-primary transition-colors border-b-2 border-[#1A1A1A] hover:border-primary pb-1 self-start" href="#">
-                        Read Our Story
-                    </a>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full bg-surface-container-highest dark:bg-inverse-surface bg-surface-container-highest flat no shadows mt-xl border-t border-[#E5E1DA]">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-container-margin py-lg max-w-7xl mx-auto">
-<div class="col-span-1 md:col-span-1 mb-8 md:mb-0">
-<a class="font-display text-headline-md text-primary block mb-4" href="#">Chaiverse</a>
-<p class="text-on-surface-variant font-body-sm mb-4 max-w-xs">Modern Heritage Indian Cafe. Bringing the authentic taste of Mumbai streets to Geelong.</p>
-<div class="flex gap-4">
-<a class="text-on-surface-variant hover:text-primary transition-colors focus:ring-2 focus:ring-primary rounded-full p-1" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
-<a class="text-on-surface-variant hover:text-primary transition-colors focus:ring-2 focus:ring-primary rounded-full p-1" href="#"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
-</div>
-</div>
-<div class="col-span-1">
-<h4 class="font-label-md text-label-md uppercase text-[#1A1A1A] mb-4">Links</h4>
-<ul class="space-y-3">
-<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Privacy Policy</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Terms of Service</a></li>
-</ul>
-</div>
-<div class="col-span-1" id="locations">
-<h4 class="font-label-md text-label-md uppercase text-[#1A1A1A] mb-4">Location &amp; Hours</h4>
-<address class="not-italic text-on-surface-variant font-body-md mb-4">
-                    123 Malop Street,<br/>
-                    Geelong, VIC 3220
-                </address>
-<div class="text-on-surface-variant font-body-md">
-<p>Mon-Fri: 7am - 4pm</p>
-<p>Sat-Sun: 8am - 3pm</p>
-</div>
-</div>
-<div class="col-span-1">
-<h4 class="font-label-md text-label-md uppercase text-[#1A1A1A] mb-4">Voucher Signup</h4>
-<p class="text-on-surface-variant font-body-md mb-4 text-sm">Join our mailing list for a free cutting chai on your birthday.</p>
-<form class="flex flex-col gap-2" onsubmit="event.preventDefault();">
-<label class="sr-only" for="email">Email Address</label>
-<input class="w-full bg-[#FDFBF7] border border-[#1A1A1A] px-4 py-3 rounded-md font-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" id="email" placeholder="YOUR EMAIL" type="email"/>
-<button class="w-full bg-[#1A1A1A] text-white font-label-md text-label-md uppercase py-3 rounded-md hover:bg-primary transition-colors h-12" type="submit">
-                        Subscribe
-                    </button>
-</form>
-</div>
-</div>
-<div class="px-container-margin py-4 max-w-7xl mx-auto border-t border-outline-variant/20 mt-8">
-<p class="text-on-surface-variant font-body-sm text-sm text-center md:text-left">© 2024 Chaiverse Modern Indian Cafe. All Rights Reserved.</p>
-</div>
-</footer>
-<script>
-        // Simple nav shadow on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('global-nav');
-            if (window.scrollY > 20) {
-                nav.classList.add('shadow-sm');
-                nav.classList.replace('bg-surface/80', 'bg-surface/95');
-            } else {
-                nav.classList.remove('shadow-sm');
-                nav.classList.replace('bg-surface/95', 'bg-surface/80');
-            }
-        });
-    </script>
+
+            <p class="form-disclaimer">By submitting this form you agree to be contacted by RGDETAILING regarding your quote. We do not share your information with third parties.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                        -->
+  <!-- ============================================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">RG<span class="footer-logo-sep">/</span>DETAILING</span>
+        <p class="footer-tagline">Paint Correction &amp; Ceramic Coating Specialists.<br>North Geelong, Victoria.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#packages">Packages</a>
+        <a href="#process">Process</a>
+        <a href="#quote">Get a Quote</a>
+      </nav>
+      <div class="footer-legal">
+        <span>&copy; 2025 RGDETAILING. All rights reserved.</span>
+        <span>ABN 00 000 000 000</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP 3.12 via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="app.js" defer></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        gsap.registerPlugin(ScrollTrigger);
+  window.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
 
-        // Use gsap.matchMedia for responsive animations if needed, though most animations here are universal.
-        let mm = gsap.matchMedia();
+    // Initial setup: Hide main content and disable scrolling during preloader
+    gsap.set('body', { overflow: 'hidden' });
+    gsap.set('body > *:not(#preloader)', { autoAlpha: 0 });
+    gsap.set('#nav', { autoAlpha: 0, y: -20 }); // Specific initial state for nav
 
-        mm.add({
-            isDesktop: "(min-width: 768px)",
-            isMobile: "(max-width: 767px)",
-        }, (context) => {
-            let { isDesktop, isMobile } = context.conditions;
+    // ============================================================
+    // PRELOADER ANIMATION
+    // ============================================================
+    const preloaderTimeline = gsap.timeline({
+      onComplete: () => {
+        document.body.classList.add('preloader-done');
+        document.body.style.overflow = ''; // Re-enable scrolling
 
-            // --- Hero Section Animations (On Load) ---
-            gsap.context(() => {
-                const heroSection = document.querySelector('main > section:first-of-type');
-                const heroHeadlineLines = heroSection.querySelectorAll('h1, h1 span'); // Target H1 (first line) and its span (second line)
-                const heroBody = heroSection.querySelector('p.font-body-lg');
-                const heroButton = heroSection.querySelector('button.bg-[#FF9933]');
-                const heroImageContainer = heroSection.querySelector('div.md\\:col-span-6 > div:first-of-type');
-                const heroImage = heroSection.querySelector('div.md\\:col-span-6 > div:first-of-type img');
+        // Main content reveal timeline
+        const mainEntranceTimeline = gsap.timeline();
 
-                // Animate headline lines with a subtle stagger
-                gsap.from(heroHeadlineLines, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 1,
-                    ease: "power3.out",
-                    stagger: 0.15,
-                    delay: 0.2
-                });
+        mainEntranceTimeline
+          .fromTo('body > *:not(#preloader)',
+            { autoAlpha: 0 },
+            { autoAlpha: 1, duration: 1.2, ease: 'power2.out' }
+          )
+          .fromTo('#nav',
+            { y: -20, autoAlpha: 0 },
+            { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power2.out' },
+            '<0.4' // Nav slides in slightly after main content starts to reveal
+          );
 
-                // Animate body text
-                gsap.from(heroBody, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 1,
-                    ease: "power3.out",
-                    delay: 0.6
-                });
-
-                // Animate order button
-                gsap.from(heroButton, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 1,
-                    ease: "power3.out",
-                    delay: 0.8
-                });
-
-                // Animate hero image container (subtle scale and fade)
-                gsap.from(heroImageContainer, {
-                    scale: 0.95,
-                    opacity: 0,
-                    duration: 1.2,
-                    ease: "power3.out",
-                    delay: 0.4
-                });
-
-                // Animate hero image itself (slight counter-scale for depth, leading into CSS hover)
-                gsap.from(heroImage, {
-                    scale: 1.05,
-                    duration: 1.2,
-                    ease: "power3.out",
-                    delay: 0.4
-                });
-
-            }, 'main > section:first-of-type'); // Scope animations to the hero section
-
-
-            // --- The Signatures (Bento Grid) Section Animations ---
-            gsap.context(() => {
-                const signatureSection = document.querySelector('#menu');
-                const signatureHeadline = signatureSection.querySelector('h2');
-                const signatureLink = signatureSection.querySelector('a.font-label-md');
-                const signatureCards = signatureSection.querySelectorAll('.grid.grid-cols-1.md\\:grid-cols-3.gap-md > div');
-
-                // Animate headline and link when section enters view
-                gsap.from([signatureHeadline, signatureLink], {
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.8,
-                    ease: "power2.out",
-                    stagger: 0.1,
-                    scrollTrigger: {
-                        trigger: signatureSection,
-                        start: "top 85%", // Trigger when top of section is 85% from viewport top
-                        toggleActions: "play none none none",
-                    }
-                });
-
-                // Animate each card with a staggered, tactile reveal
-                gsap.from(signatureCards, {
-                    y: 50,
-                    opacity: 0,
-                    scale: 0.95,
-                    duration: 0.8,
-                    ease: "power2.out",
-                    stagger: 0.15,
-                    scrollTrigger: {
-                        trigger: signatureCards[0], // Trigger based on the first card's position
-                        start: "top 85%",
-                        toggleActions: "play none none none",
-                    }
-                });
-
-            }, "#menu"); // Scope animations to the menu section
-
-
-            // --- The Culture (50/50 Split) Section Animations ---
-            gsap.context(() => {
-                const cultureSection = document.querySelector('#story');
-                const cultureImage = cultureSection.querySelector('.h-96.md\\:h-auto img');
-                const cultureTextElements = cultureSection.querySelectorAll('.bg-[#FDFBF7] > span, .bg-[#FDFBF7] > h2, .bg-[#FDFBF7] > p, .bg-[#FDFBF7] > a');
-
-                // Animate image from the side
-                gsap.from(cultureImage, {
-                    x: isDesktop ? -80 : -30, // More pronounced on desktop
-                    opacity: 0,
-                    duration: 1,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: cultureSection,
-                        start: "top 80%",
-                        toggleActions: "play none none none",
-                    }
-                });
-
-                // Animate text elements with a staggered fade and slide
-                gsap.from(cultureTextElements, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.9,
-                    ease: "power2.out",
-                    stagger: 0.1,
-                    scrollTrigger: {
-                        trigger: cultureSection,
-                        start: "top 75%", // Trigger slightly later for the text block
-                        toggleActions: "play none none none",
-                    }
-                });
-
-            }, "#story"); // Scope animations to the story section
-
-        }); // End matchMedia
+        // Hero section entrance animation (once preloader is done and main content is visible)
+        gsap.timeline({ delay: 0.5 }) // A small delay after nav appears for hero content
+          .from('.hero-eyebrow', { autoAlpha: 0, y: 20, duration: 0.8, ease: 'power2.out' })
+          .from('.hero-title .title-line', {
+            autoAlpha: 0,
+            y: 40,
+            duration: 1,
+            ease: 'power3.out',
+            stagger: 0.15
+          }, '<0.2')
+          .from('.hero-sub', { autoAlpha: 0, y: 20, duration: 0.8, ease: 'power2.out' }, '-=0.5')
+          .from('.hero-actions .btn-primary, .hero-actions .btn-secondary', {
+            autoAlpha: 0,
+            y: 20,
+            duration: 0.7,
+            ease: 'power2.out',
+            stagger: 0.15
+          }, '-=0.4')
+          .from('.hero-stats .stat, .hero-stats .stat-rule', {
+            autoAlpha: 0,
+            y: 20,
+            duration: 0.7,
+            ease: 'power2.out',
+            stagger: 0.1
+          }, '-=0.4')
+          .from('.hero-scroll-indicator', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' }, '-=0.3');
+      }
     });
+
+    // Preloader bar, logo, and location animation
+    preloaderTimeline
+      .fromTo('.preloader-logo', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.8, ease: 'power2.out' })
+      .fromTo('.preloader-location', { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '<0.2')
+      .to('#preloader-fill', {
+        width: '100%',
+        duration: 1.5,
+        ease: 'power2.inOut'
+      }, '+=0.5') // Start after logo/location
+      .to('#preloader', {
+        autoAlpha: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        delay: 0.3, // Small delay after fill completes
+        pointerEvents: 'none'
+      });
+
+    // ============================================================
+    // MARQUEE STRIP ANIMATION
+    // ============================================================
+    gsap.to('.marquee-track', {
+      xPercent: -50, // Move by 50% of its width to create a seamless loop with duplicated content
+      duration: 25, // Speed of the marquee
+      ease: 'linear',
+      repeat: -1, // Infinite loop
+    });
+
+    // ============================================================
+    // PACKAGES SECTION (Bento Grid) ANIMATIONS
+    // ============================================================
+    gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#packages',
+          start: 'top 80%', // When the top of the trigger hits 80% down the viewport
+          toggleActions: 'play none none none', // Play animation once
+        }
+      });
+
+      tl.from('.section-label', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' })
+        .from('#packages-heading', { autoAlpha: 0, y: 20, duration: 0.8, ease: 'power2.out' }, '<0.2')
+        .from('#packages .section-sub', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' }, '<0.2')
+        .from('.package-card', {
+          autoAlpha: 0,
+          y: 50,
+          duration: 1,
+          ease: 'power3.out',
+          stagger: 0.2
+        }, '<0.3')
+        .from('.packages-note', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' }, '<0.2');
+    }, '#packages');
+
+    // ============================================================
+    // PROCESS SECTION ANIMATIONS
+    // ============================================================
+    gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#process',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        }
+      });
+
+      tl.from('#process .section-label', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' })
+        .from('#process-heading', { autoAlpha: 0, y: 20, duration: 0.8, ease: 'power2.out' }, '<0.2');
+
+      // Stagger steps and their corresponding connectors
+      gsap.utils.toArray('.process-step').forEach((step, i) => {
+        tl.from(step, { autoAlpha: 0, y: 50, duration: 1, ease: 'power3.out' }, '<0.3');
+        const connector = gsap.utils.toArray('.process-connector')[i];
+        if (connector) {
+          tl.from(connector, {
+            scaleX: 0,
+            transformOrigin: 'left center',
+            duration: 0.8,
+            ease: 'power2.out'
+          }, '<0.3'); // Connectors appear with or just after their preceding step
+        }
+      });
+    }, '#process');
+
+    // ============================================================
+    // QUOTE FORM SECTION ANIMATIONS
+    // ============================================================
+    gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#quote',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        }
+      });
+
+      tl.from('#quote .section-label', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' })
+        .from('#quote-heading', { autoAlpha: 0, y: 20, duration: 0.8, ease: 'power2.out' }, '<0.2')
+        .from('#quote .section-sub', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' }, '<0.2')
+        .from('.quote-contact .contact-item', {
+          autoAlpha: 0,
+          x: -30, // Slide from left
+          duration: 0.8,
+          ease: 'power2.out',
+          stagger: 0.15
+        }, '<0.3');
+      // Note: Form elements (inputs, textareas, buttons) are not present in the provided HTML.
+      // If they were, they would be targeted here for a staggered entrance animation.
+    }, '#quote');
+
+  });
 </script>
-</body></html>
+</body>
+</html>
