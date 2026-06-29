@@ -1,462 +1,227 @@
 /* ================================================================
    RGDETAILING — app.js
-   GSAP 3.12+ motion layer + form handling
+   UI interactions: nav, tabs, scroll-reveal, form validation
+   Note: GSAP animations are injected post-audit by the pipeline.
    ================================================================ */
 
 (function () {
   'use strict';
 
   /* ---------------------------------------------------------------
-     GSAP REGISTRATION
+     NAV — scroll state + mobile menu
   --------------------------------------------------------------- */
-  gsap.registerPlugin(ScrollTrigger);
+  const nav    = document.getElementById('nav');
+  const toggle = document.getElementById('navToggle');
+  const mobile = document.getElementById('navMobile');
 
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* ---------------------------------------------------------------
-     PRELOADER
-  --------------------------------------------------------------- */
-  const preloader    = document.getElementById('preloader');
-  const preloaderFill = document.getElementById('preloader-fill');
-
-  function runPreloader() {
-    if (!preloader) return;
-
-    const tl = gsap.timeline({
-      onComplete: initPageAnimations
-    });
-
-    // Load bar fill
-    tl.to(preloaderFill, {
-      width: '100%',
-      duration: 1.2,
-      ease: 'power2.inOut'
-    })
-    // Brief hold at 100%
-    .to(preloaderFill, { opacity: 0, duration: 0.2, ease: 'power2.in' }, '+=0.15')
-    // Slide preloader up and out
-    .to(preloader, {
-      yPercent: -100,
-      duration: 0.75,
-      ease: 'power4.inOut'
-    }, '-=0.1')
-    .set(preloader, { display: 'none' });
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
   }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-  /* ---------------------------------------------------------------
-     PAGE ENTRANCE ANIMATIONS
-  --------------------------------------------------------------- */
-  function initPageAnimations() {
-    if (prefersReducedMotion) {
-      document.documentElement.classList.add('no-motion');
-      return;
-    }
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    const next = !open;
+    toggle.setAttribute('aria-expanded', String(next));
+    mobile.setAttribute('aria-hidden',   String(!next));
+    mobile.classList.toggle('open', next);
+  });
 
-    // Nav entrance
-    gsap.from('#nav', {
-      opacity: 0,
-      y: -16,
-      duration: 0.6,
-      ease: 'power4.out'
-    });
-
-    // Hero content stagger
-    const heroTl = gsap.timeline({ delay: 0.05 });
-
-    heroTl
-      .from('.hero-eyebrow', {
-        opacity: 0,
-        y: 16,
-        duration: 0.55,
-        ease: 'power4.out'
-      })
-      .from('.title-line', {
-        opacity: 0,
-        y: 50,
-        duration: 0.75,
-        ease: 'power4.out',
-        stagger: 0.08
-      }, '-=0.3')
-      .from('.hero-sub', {
-        opacity: 0,
-        y: 24,
-        duration: 0.6,
-        ease: 'power4.out'
-      }, '-=0.45')
-      .from('.hero-actions', {
-        opacity: 0,
-        y: 20,
-        duration: 0.5,
-        ease: 'power4.out'
-      }, '-=0.4')
-      .from('.hero-stats .stat, .hero-stats .stat-rule', {
-        opacity: 0,
-        y: 16,
-        duration: 0.5,
-        ease: 'power4.out',
-        stagger: 0.06
-      }, '-=0.3')
-      .from('.hero-scroll-indicator', {
-        opacity: 0,
-        duration: 0.6,
-        ease: 'power2.out'
-      }, '-=0.2');
-
-    initScrollAnimations();
-  }
-
-  /* ---------------------------------------------------------------
-     SCROLL-TRIGGER REVEALS
-  --------------------------------------------------------------- */
-  function initScrollAnimations() {
-
-    // Section headers
-    gsap.utils.toArray('.section-header').forEach(function (el) {
-      gsap.from(el.querySelectorAll('.section-label, .section-title, .section-sub'), {
-        opacity: 0,
-        y: 32,
-        duration: 0.7,
-        ease: 'power4.out',
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 82%',
-          once: true
-        }
-      });
-    });
-
-    // Package cards — staggered entrance
-    gsap.from('.package-card', {
-      opacity: 0,
-      y: 48,
-      duration: 0.75,
-      ease: 'power4.out',
-      stagger: 0.12,
-      scrollTrigger: {
-        trigger: '.bento-grid',
-        start: 'top 80%',
-        once: true
-      }
-    });
-
-    // Process steps
-    gsap.from('.process-step', {
-      opacity: 0,
-      y: 40,
-      duration: 0.7,
-      ease: 'power4.out',
-      stagger: 0.15,
-      scrollTrigger: {
-        trigger: '.process-grid',
-        start: 'top 78%',
-        once: true
-      }
-    });
-
-    // Quote layout
-    gsap.from('.quote-info', {
-      opacity: 0,
-      x: -32,
-      duration: 0.75,
-      ease: 'power4.out',
-      scrollTrigger: {
-        trigger: '.quote-layout',
-        start: 'top 80%',
-        once: true
-      }
-    });
-
-    gsap.from('.quote-form-wrap', {
-      opacity: 0,
-      x: 32,
-      duration: 0.75,
-      ease: 'power4.out',
-      scrollTrigger: {
-        trigger: '.quote-layout',
-        start: 'top 80%',
-        once: true
-      }
-    });
-
-    // Footer
-    gsap.from('.footer-inner > *', {
-      opacity: 0,
-      y: 20,
-      duration: 0.6,
-      ease: 'power4.out',
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: '#footer',
-        start: 'top 90%',
-        once: true
-      }
-    });
-  }
-
-  /* ---------------------------------------------------------------
-     NAVIGATION — scroll state + mobile menu
-  --------------------------------------------------------------- */
-  const nav = document.getElementById('nav');
-
-  function handleNavScroll() {
-    if (window.scrollY > 40) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  }
-
-  window.addEventListener('scroll', handleNavScroll, { passive: true });
-  handleNavScroll();
-
-  // Mobile burger
-  const burger    = document.getElementById('nav-burger');
-  const mobileNav = document.getElementById('nav-mobile');
-
-  if (burger && mobileNav) {
-    burger.addEventListener('click', function () {
-      const isOpen = burger.classList.toggle('open');
-      mobileNav.classList.toggle('open', isOpen);
-      burger.setAttribute('aria-expanded', String(isOpen));
-      mobileNav.setAttribute('aria-hidden', String(!isOpen));
-    });
-
-    // Close on link click
-    mobileNav.querySelectorAll('.nav-mobile-link').forEach(function (link) {
-      link.addEventListener('click', function () {
-        burger.classList.remove('open');
-        mobileNav.classList.remove('open');
-        burger.setAttribute('aria-expanded', 'false');
-        mobileNav.setAttribute('aria-hidden', 'true');
-      });
-    });
-  }
-
-  /* ---------------------------------------------------------------
-     CSRF TOKEN (fetched from backend)
-  --------------------------------------------------------------- */
-  function fetchCsrfToken() {
-    const tokenInput = document.getElementById('csrf-token');
-    if (!tokenInput) return;
-
-    fetch('/api/csrf-token', { credentials: 'same-origin' })
-      .then(function (res) {
-        if (!res.ok) return;
-        return res.json();
-      })
-      .then(function (data) {
-        if (data && data.token) {
-          tokenInput.value = data.token;
-        }
-      })
-      .catch(function () {
-        // Backend unavailable in static preview — token remains empty
-      });
-  }
-
-  fetchCsrfToken();
-
-  /* ---------------------------------------------------------------
-     FORM VALIDATION & SUBMISSION
-  --------------------------------------------------------------- */
-  const form         = document.getElementById('quote-form');
-  const submitBtn    = document.getElementById('form-submit');
-  const successPanel = document.getElementById('form-success');
-  const errorBanner  = document.getElementById('form-error');
-
-  const VALID_PACKAGES = new Set(['CERAMIC_LITE', 'CERAMIC_PRO', 'APEX_CERAMIC']);
-
-  // Field-level validators — mirror backend rules
-  const validators = {
-    name: function (v) {
-      if (!v || v.trim().length < 2) return 'Name must be at least 2 characters.';
-      if (v.trim().length > 100)     return 'Name must not exceed 100 characters.';
-      return '';
-    },
-    email: function (v) {
-      if (!v || !v.trim()) return 'Email address is required.';
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())) return 'Please enter a valid email address.';
-      return '';
-    },
-    phone: function (v) {
-      if (!v || !v.trim()) return 'Phone number is required.';
-      var cleaned = v.replace(/[\s\-()]/g, '');
-      if (!/^(\+61|0)[2-9]\d{8}$/.test(cleaned)) return 'Please enter a valid Australian phone number.';
-      return '';
-    },
-    vehicle: function (v) {
-      if (!v || v.trim().length < 2) return 'Vehicle details must be at least 2 characters.';
-      if (v.trim().length > 100)     return 'Vehicle details must not exceed 100 characters.';
-      return '';
-    },
-    package: function (v) {
-      if (!v) return 'Please select a package.';
-      if (!VALID_PACKAGES.has(v)) return 'Please select a valid package.';
-      return '';
-    },
-    message: function (v) {
-      if (v && v.length > 500) return 'Message must not exceed 500 characters.';
-      return '';
-    }
-  };
-
-  function showFieldError(fieldId, message) {
-    var input = document.getElementById(fieldId);
-    var errorEl = document.getElementById(fieldId + '-error');
-    if (!input || !errorEl) return;
-
-    errorEl.textContent = message;
-    if (message) {
-      input.setAttribute('aria-invalid', 'true');
-      input.setAttribute('aria-describedby', fieldId + '-error');
-    } else {
-      input.removeAttribute('aria-invalid');
-    }
-  }
-
-  function clearFieldError(fieldId) {
-    showFieldError(fieldId, '');
-  }
-
-  // Validate on blur for each field
-  var fields = ['f-name', 'f-email', 'f-phone', 'f-vehicle', 'f-package'];
-  fields.forEach(function (fid) {
-    var el = document.getElementById(fid);
-    if (!el) return;
-    var key = fid.replace('f-', '');
-    el.addEventListener('blur', function () {
-      var err = validators[key] ? validators[key](el.value) : '';
-      showFieldError(fid, err);
+  // Close mobile menu when any link inside is clicked
+  mobile.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      mobile.setAttribute('aria-hidden',   'true');
+      mobile.classList.remove('open');
     });
   });
 
-  // Character counter for textarea
-  var messageInput = document.getElementById('f-message');
-  var charCount    = document.getElementById('f-message-count');
+  /* ---------------------------------------------------------------
+     PACKAGE TABS
+  --------------------------------------------------------------- */
+  const tabs   = document.querySelectorAll('.pkg-tab');
+  const panels = document.querySelectorAll('.pkg-panel');
 
-  if (messageInput && charCount) {
-    messageInput.addEventListener('input', function () {
-      var len = messageInput.value.length;
-      charCount.textContent = len + ' / 500';
-      charCount.classList.toggle('near-limit', len > 450);
-      if (len > 500) {
-        showFieldError('f-message', 'Message must not exceed 500 characters.');
-      } else {
-        clearFieldError('f-message');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('aria-controls');
+
+      tabs.forEach(t => {
+        t.classList.remove('pkg-tab--active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach(p => {
+        p.classList.remove('pkg-panel--active');
+        p.hidden = true;
+      });
+
+      tab.classList.add('pkg-tab--active');
+      tab.setAttribute('aria-selected', 'true');
+
+      const panel = document.getElementById(targetId);
+      if (panel) {
+        panel.classList.add('pkg-panel--active');
+        panel.hidden = false;
       }
+    });
+  });
+
+  /* ---------------------------------------------------------------
+     SCROLL REVEAL (IntersectionObserver)
+  --------------------------------------------------------------- */
+  const revealEls = document.querySelectorAll('[data-reveal]');
+
+  if (revealEls.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    // Fallback: show everything immediately
+    revealEls.forEach(el => el.classList.add('visible'));
+  }
+
+  /* ---------------------------------------------------------------
+     TEXTAREA CHARACTER COUNTER
+  --------------------------------------------------------------- */
+  const msgField = document.getElementById('f-message');
+  const msgCount = document.getElementById('msg-count');
+
+  if (msgField && msgCount) {
+    msgField.addEventListener('input', () => {
+      msgCount.textContent = msgField.value.length + ' / 500';
     });
   }
 
-  function validateAll() {
-    var allValid = true;
-    var firstInvalidId = null;
+  /* ---------------------------------------------------------------
+     QUOTE FORM — validation + submission
+  --------------------------------------------------------------- */
+  const form = document.getElementById('quoteForm');
+  if (!form) return;
 
-    var fieldMap = {
-      'f-name':    'name',
-      'f-email':   'email',
-      'f-phone':   'phone',
-      'f-vehicle': 'vehicle',
-      'f-package': 'package',
-      'f-message': 'message'
+  const EMAIL_RE = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+  // Australian phone: +61 or 0, then [2-9], then 8 digits
+  const PHONE_RE = /^(\+61|0)[2-9]\d{8}$/;
+
+  function fieldEl(id)    { return document.getElementById(id); }
+  function errorEl(id)    { return document.getElementById('err-' + id); }
+
+  function setError(id, msg) {
+    const input = fieldEl('f-' + id);
+    const err   = errorEl(id);
+    if (err)   err.textContent = msg;
+    if (input) {
+      input.classList.toggle('is-error', Boolean(msg));
+      input.setAttribute('aria-invalid', Boolean(msg).toString());
+    }
+  }
+
+  function clearError(id) { setError(id, ''); }
+
+  function validate(data) {
+    let ok = true;
+
+    if (!data.name || data.name.length < 2) {
+      setError('name', 'Please enter your full name (at least 2 characters).');
+      ok = false;
+    } else { clearError('name'); }
+
+    if (!data.email || !EMAIL_RE.test(data.email)) {
+      setError('email', 'Please enter a valid email address.');
+      ok = false;
+    } else { clearError('email'); }
+
+    const phone = (data.phone || '').replace(/[\s\-()]/g, '');
+    if (!phone || !PHONE_RE.test(phone)) {
+      setError('phone', 'Enter a valid Australian phone number (e.g. 0412 345 678).');
+      ok = false;
+    } else { clearError('phone'); }
+
+    if (!data.vehicle || data.vehicle.length < 2) {
+      setError('vehicle', 'Please describe your vehicle (make and model).');
+      ok = false;
+    } else { clearError('vehicle'); }
+
+    if (!data.package) {
+      setError('package', 'Please select a package.');
+      ok = false;
+    } else { clearError('package'); }
+
+    return ok;
+  }
+
+  // Live clear errors on input
+  ['name', 'email', 'phone', 'vehicle', 'package'].forEach(id => {
+    const el = fieldEl('f-' + id);
+    if (el) el.addEventListener('input', () => clearError(id));
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('submitBtn');
+    const status    = document.getElementById('formStatus');
+
+    const data = {
+      name:    (fieldEl('f-name')    ? fieldEl('f-name').value.trim()          : ''),
+      email:   (fieldEl('f-email')   ? fieldEl('f-email').value.trim().toLowerCase() : ''),
+      phone:   (fieldEl('f-phone')   ? fieldEl('f-phone').value.trim()         : ''),
+      vehicle: (fieldEl('f-vehicle') ? fieldEl('f-vehicle').value.trim()       : ''),
+      package: (fieldEl('f-package') ? fieldEl('f-package').value              : ''),
+      message: (fieldEl('f-message') ? fieldEl('f-message').value.trim()       : ''),
     };
 
-    Object.entries(fieldMap).forEach(function (entry) {
-      var fid = entry[0];
-      var key = entry[1];
-      var el  = document.getElementById(fid);
-      if (!el || !validators[key]) return;
+    if (!validate(data)) return;
 
-      var err = validators[key](el.value);
-      showFieldError(fid, err);
-      if (err) {
-        allValid = false;
-        if (!firstInvalidId) firstInvalidId = fid;
-      }
-    });
+    // Loading state
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+    status.textContent = '';
+    status.className   = 'form-status';
 
-    if (firstInvalidId) {
-      document.getElementById(firstInvalidId).focus();
-    }
+    try {
+      // Attempt CSRF token fetch (non-fatal if backend not running)
+      let csrf = '';
+      try {
+        const csrfRes = await fetch('/api/csrf-token', { credentials: 'same-origin' });
+        if (csrfRes.ok) {
+          const csrfJson = await csrfRes.json();
+          csrf = csrfJson.token || '';
+        }
+      } catch (_) { /* CSRF optional during local dev */ }
 
-    return allValid;
-  }
-
-  function setSubmitLoading(loading) {
-    var textEl    = submitBtn.querySelector('.submit-text');
-    var loadingEl = submitBtn.querySelector('.submit-loading');
-    submitBtn.disabled = loading;
-    if (textEl)    textEl.hidden = loading;
-    if (loadingEl) loadingEl.hidden = !loading;
-  }
-
-  function showBanner(el, message) {
-    el.textContent = message;
-    el.hidden = false;
-    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Hide any previous banners
-      successPanel.hidden = true;
-      errorBanner.hidden  = true;
-
-      if (!validateAll()) return;
-
-      setSubmitLoading(true);
-
-      var payload = {
-        name:       document.getElementById('f-name').value.trim(),
-        email:      document.getElementById('f-email').value.trim().toLowerCase(),
-        phone:      document.getElementById('f-phone').value.trim(),
-        vehicle:    document.getElementById('f-vehicle').value.trim(),
-        package:    document.getElementById('f-package').value.trim().toUpperCase(),
-        message:    (messageInput ? messageInput.value.trim() : ''),
-        csrf_token: document.getElementById('csrf-token').value
-      };
-
-      fetch('/api/quote', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res  = await fetch('/api/quote', {
+        method:      'POST',
         credentials: 'same-origin',
-        body: JSON.stringify(payload)
-      })
-        .then(function (res) {
-          return res.json().then(function (data) {
-            return { ok: res.ok, status: res.status, data: data };
-          });
-        })
-        .then(function (result) {
-          setSubmitLoading(false);
+        headers:     { 'Content-Type': 'application/json' },
+        body:        JSON.stringify({ ...data, csrf_token: csrf }),
+      });
 
-          if (result.ok) {
-            form.reset();
-            if (charCount) charCount.textContent = '0 / 500';
-            successPanel.hidden = false;
-            successPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            fetchCsrfToken();
-          } else if (result.status === 429) {
-            showBanner(errorBanner, 'Too many requests. Please wait a moment before submitting again.');
-          } else {
-            var msg = (result.data && result.data.error) || 'An error occurred. Please try again.';
-            showBanner(errorBanner, msg);
-          }
-        })
-        .catch(function () {
-          setSubmitLoading(false);
-          showBanner(errorBanner, 'Unable to connect. Please check your connection and try again.');
-        });
-    });
-  }
+      const json = await res.json().catch(() => ({}));
 
-  /* ---------------------------------------------------------------
-     BOOT
-  --------------------------------------------------------------- */
-  document.addEventListener('DOMContentLoaded', function () {
-    runPreloader();
+      if (res.ok && json.success) {
+        status.textContent = 'Quote request sent! We will be in touch within 24 hours.';
+        status.className   = 'form-status is-success';
+        form.reset();
+        if (msgCount) msgCount.textContent = '0 / 500';
+      } else {
+        status.textContent = json.error || 'Something went wrong. Please try again or call us on 0438 781 340.';
+        status.className   = 'form-status is-error';
+      }
+    } catch (_) {
+      status.textContent = 'Network error. Please check your connection or call us on 0438 781 340.';
+      status.className   = 'form-status is-error';
+    } finally {
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+    }
   });
 
-})();
+}());

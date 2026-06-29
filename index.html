@@ -3,55 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RGDETAILING — Elite paint correction and ceramic coating specialists in North Geelong, Victoria. Premium protection for your vehicle.">
-  <title>RGDETAILING — Elite Detailing, North Geelong</title>
-
+  <meta name="description" content="RGDETAILING — Premium ceramic coating and paint correction specialists in North Geelong, VIC. Gtechniq Crystal Serum Ultra, Artdeshine NGC+, and professional detailing packages.">
+  <title>RGDETAILING | Ceramic Coating & Paint Correction — North Geelong</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <a href="#hero" class="skip-link">Skip to main content</a>
-
-  <!-- ============================================================ -->
-  <!-- PRELOADER                                                     -->
-  <!-- ============================================================ -->
-  <div id="preloader" role="status" aria-label="Loading RGDETAILING">
-    <div class="preloader-inner">
-      <div class="preloader-logo" aria-hidden="true">
-        <span class="pl-rg">RG</span><span class="pl-sep">/</span><span class="pl-detail">DETAILING</span>
-      </div>
-      <div class="preloader-track" aria-hidden="true">
-        <div class="preloader-fill" id="preloader-fill"></div>
-      </div>
-      <div class="preloader-location" aria-hidden="true">NORTH GEELONG · VICTORIA</div>
-    </div>
-  </div>
 
   <!-- ============================================================ -->
   <!-- NAVIGATION                                                    -->
   <!-- ============================================================ -->
   <nav id="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
+    <div class="nav-bar">
       <a href="#" class="nav-logo" aria-label="RGDETAILING home">
-        <span class="logo-rg">RG</span><span class="logo-slash">/</span><span class="logo-word">DETAILING</span>
+        <span class="logo-rg">RG</span><span class="logo-sep">/</span><span class="logo-word">DETAILING</span>
       </a>
-      <div class="nav-links">
-        <a href="#packages" class="nav-link">PACKAGES</a>
-        <a href="#process" class="nav-link">PROCESS</a>
-        <a href="#quote" class="nav-cta" aria-label="Get a quote from RGDETAILING">GET A QUOTE</a>
-      </div>
-      <button class="nav-burger" id="nav-burger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="nav-mobile">
-        <span></span><span></span>
+      <ul class="nav-links" role="list">
+        <li><a href="#packages" class="nav-link">Packages</a></li>
+        <li><a href="#services"  class="nav-link">Services</a></li>
+        <li><a href="#process"   class="nav-link">Process</a></li>
+        <li><a href="#contact"   class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
+      <button class="nav-toggle" id="navToggle"
+        aria-label="Toggle menu" aria-expanded="false" aria-controls="navMobile">
+        <span></span><span></span><span></span>
       </button>
     </div>
-    <div class="nav-mobile" id="nav-mobile" role="menu" aria-hidden="true">
-      <a href="#packages" class="nav-mobile-link" role="menuitem">PACKAGES</a>
-      <a href="#process" class="nav-mobile-link" role="menuitem">PROCESS</a>
-      <a href="#quote" class="nav-mobile-link nav-mobile-cta" role="menuitem">GET A QUOTE</a>
+    <div class="nav-mobile" id="navMobile" aria-hidden="true" role="menu">
+      <a href="#packages" class="nav-mobile-link" role="menuitem">Packages</a>
+      <a href="#services"  class="nav-mobile-link" role="menuitem">Services</a>
+      <a href="#process"   class="nav-mobile-link" role="menuitem">Process</a>
+      <a href="#contact"   class="nav-mobile-link" role="menuitem">Contact</a>
+      <a href="#contact"   class="btn btn-primary nav-mobile-cta" role="menuitem">Get a Quote</a>
     </div>
   </nav>
 
@@ -59,600 +45,586 @@
   <!-- HERO                                                          -->
   <!-- ============================================================ -->
   <section id="hero" aria-labelledby="hero-heading">
-    <div class="hero-grid-overlay" aria-hidden="true"></div>
-    <div class="hero-noise" aria-hidden="true"></div>
-
+    <div class="hero-bg">
+      <img
+        src="test_assets/rg_hero_test.png"
+        alt="Glossy black BMW M4 Competition in a high-end detailing studio with dramatic LED hex-lights reflecting off freshly ceramic-coated paint"
+        class="hero-img"
+        loading="eager"
+        fetchpriority="high">
+      <div class="hero-overlay" aria-hidden="true"></div>
+    </div>
     <div class="hero-content">
-      <div class="hero-eyebrow" aria-label="Location">
-        <span class="eyebrow-pulse" aria-hidden="true"></span>
-        NORTH GEELONG · VICTORIA
+      <div class="hero-eyebrow" aria-label="Location: North Geelong, Victoria">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        North Geelong &middot; Victoria
       </div>
-
       <h1 id="hero-heading" class="hero-title">
-        <span class="title-line">ELITE</span>
-        <span class="title-line title-accent">DETAILING</span>
-        <span class="title-line">FOR GEELONG</span>
+        <span class="ht-line">Elite</span>
+        <span class="ht-line ht-accent">Detailing</span>
+        <span class="ht-line">for Geelong</span>
       </h1>
-
       <p class="hero-sub">
         Paint Correction &amp; Ceramic Coating Specialists.<br>
         Precision-engineered protection for every vehicle.
       </p>
-
       <div class="hero-actions">
-        <a href="#quote" class="btn-primary">
-          GET A QUOTE
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-        <a href="#packages" class="btn-secondary">VIEW PACKAGES</a>
+        <a href="#contact"  class="btn btn-primary  btn-lg">Get a Quote</a>
+        <a href="#packages" class="btn btn-ghost    btn-lg">View Packages</a>
+      </div>
+      <div class="hero-stats" aria-label="Key facts">
+        <div class="stat">
+          <span class="stat-num">9yr</span>
+          <span class="stat-label">Max Coating Guarantee</span>
+        </div>
+        <div class="stat-rule" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Ceramic Tiers</span>
+        </div>
+        <div class="stat-rule" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Satisfaction Guarantee</span>
+        </div>
       </div>
     </div>
-
-    <div class="hero-stats" aria-label="Key statistics">
-      <div class="stat">
-        <span class="stat-num" aria-label="Over 500 vehicles protected">500+</span>
-        <span class="stat-label">VEHICLES PROTECTED</span>
-      </div>
-      <div class="stat-rule" aria-hidden="true"></div>
-      <div class="stat">
-        <span class="stat-num" aria-label="Up to 7 year coating warranty">7YR</span>
-        <span class="stat-label">MAX COATING WARRANTY</span>
-      </div>
-      <div class="stat-rule" aria-hidden="true"></div>
-      <div class="stat">
-        <span class="stat-num" aria-label="100 percent satisfaction guarantee">100%</span>
-        <span class="stat-label">SATISFACTION GUARANTEE</span>
-      </div>
-    </div>
-
-    <div class="hero-scroll-indicator" aria-hidden="true">
-      <div class="scroll-line"></div>
-      <span class="scroll-label">SCROLL</span>
-    </div>
+    <a href="#packages" class="hero-scroll" aria-label="Scroll down to packages">
+      <div class="scroll-pill"></div>
+    </a>
   </section>
 
   <!-- ============================================================ -->
-  <!-- MARQUEE STRIP                                                 -->
+  <!-- MARQUEE                                                        -->
   <!-- ============================================================ -->
-  <div class="marquee-strip" aria-hidden="true">
+  <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>PAINT CORRECTION</span>
-      <span class="marquee-sep">·</span>
-      <span>CERAMIC COATING</span>
-      <span class="marquee-sep">·</span>
-      <span>PAINT PROTECTION FILM</span>
-      <span class="marquee-sep">·</span>
-      <span>INTERIOR DETAILING</span>
-      <span class="marquee-sep">·</span>
-      <span>PAINT DECONTAMINATION</span>
-      <span class="marquee-sep">·</span>
-      <span>GLASS COATING</span>
-      <span class="marquee-sep">·</span>
-      <span>PAINT CORRECTION</span>
-      <span class="marquee-sep">·</span>
-      <span>CERAMIC COATING</span>
-      <span class="marquee-sep">·</span>
-      <span>PAINT PROTECTION FILM</span>
-      <span class="marquee-sep">·</span>
-      <span>INTERIOR DETAILING</span>
-      <span class="marquee-sep">·</span>
-      <span>PAINT DECONTAMINATION</span>
-      <span class="marquee-sep">·</span>
-      <span>GLASS COATING</span>
-      <span class="marquee-sep">·</span>
+      <span>Ceramic Coating</span><span class="ms">&middot;</span>
+      <span>Paint Correction</span><span class="ms">&middot;</span>
+      <span>Gtechniq CSL</span><span class="ms">&middot;</span>
+      <span>Artdeshine NGC+</span><span class="ms">&middot;</span>
+      <span>Crystal Serum Ultra</span><span class="ms">&middot;</span>
+      <span>Interior Detailing</span><span class="ms">&middot;</span>
+      <span>Pre-Sale Detail</span><span class="ms">&middot;</span>
+      <span>North Geelong VIC</span><span class="ms">&middot;</span>
+      <!-- duplicate for seamless loop -->
+      <span>Ceramic Coating</span><span class="ms">&middot;</span>
+      <span>Paint Correction</span><span class="ms">&middot;</span>
+      <span>Gtechniq CSL</span><span class="ms">&middot;</span>
+      <span>Artdeshine NGC+</span><span class="ms">&middot;</span>
+      <span>Crystal Serum Ultra</span><span class="ms">&middot;</span>
+      <span>Interior Detailing</span><span class="ms">&middot;</span>
+      <span>Pre-Sale Detail</span><span class="ms">&middot;</span>
+      <span>North Geelong VIC</span><span class="ms">&middot;</span>
     </div>
   </div>
 
   <!-- ============================================================ -->
-  <!-- PACKAGES — BENTO GRID                                        -->
+  <!-- PACKAGES                                                       -->
   <!-- ============================================================ -->
   <section id="packages" aria-labelledby="packages-heading">
     <div class="section-container">
-      <div class="section-header">
-        <div class="section-label">
-          <span class="label-line" aria-hidden="true"></span>
-          CERAMIC COATING PACKAGES
-        </div>
+      <header class="section-header">
+        <div class="section-label">Our Packages</div>
         <h2 id="packages-heading" class="section-title">
-          PRECISION-ENGINEERED<br>PROTECTION
+          Precision-Engineered<br>Protection
         </h2>
-        <p class="section-sub">Three tiers of uncompromising paint protection. Each package begins with a full paint decontamination and inspection before any coating is applied.</p>
+        <p class="section-sub">
+          All ceramic coating packages begin with a full decontamination wash, iron &amp; fallout
+          removal, clay bar treatment, and single-stage paint enhancement before any coating is applied.
+        </p>
+      </header>
+
+      <!-- Tab bar -->
+      <div class="pkg-tabs" role="tablist" aria-label="Package categories">
+        <button class="pkg-tab pkg-tab--active"
+          role="tab" id="tab-ceramic"
+          aria-selected="true" aria-controls="panel-ceramic">
+          Ceramic Coating
+        </button>
+        <button class="pkg-tab"
+          role="tab" id="tab-detail"
+          aria-selected="false" aria-controls="panel-detail">
+          Detailing
+        </button>
       </div>
 
-      <div class="bento-grid" role="list">
+      <!-- ====== CERAMIC PANEL ====== -->
+      <div class="pkg-panel pkg-panel--active" id="panel-ceramic"
+        role="tabpanel" aria-labelledby="tab-ceramic">
 
-        <!-- CARD 1: CERAMIC LITE -->
-        <article class="package-card" role="listitem" aria-labelledby="pkg1-name">
-          <div class="card-tier">TIER 01</div>
-          <div class="card-header">
-            <h3 id="pkg1-name" class="card-name">CERAMIC LITE</h3>
-            <div class="card-price">
-              <span class="price-from">FROM</span>
-              <span class="price-amount">$999</span>
+        <div class="included-banner" aria-label="All ceramic packages include">
+          <span class="included-label">All ceramic packages include</span>
+          <ul class="included-list">
+            <li>Decontamination wash</li>
+            <li>Iron &amp; fallout removal</li>
+            <li>Clay bar treatment</li>
+            <li>Single-stage paint enhancement</li>
+          </ul>
+        </div>
+
+        <div class="pkg-grid">
+
+          <!-- Package 3: CSL (entry) -->
+          <article class="pkg-card" aria-labelledby="pkg-csl-name">
+            <div class="pkg-tier">Basic</div>
+            <h3 id="pkg-csl-name" class="pkg-name">Professional Basic<br>Ceramic Package</h3>
+            <div class="pkg-product">Gtechniq Crystal Serum Light (CSL)</div>
+            <div class="pkg-price">
+              <span class="price-from">from</span>
+              <span class="price-num">$1,200</span>
+            </div>
+            <div class="pkg-duration">24&ndash;48 hour service</div>
+            <ul class="pkg-inclusions">
+              <li>Gtechniq CSL on all painted surfaces</li>
+              <li>5-year guarantee</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline pkg-cta">Get a Quote</a>
+          </article>
+
+          <!-- Package 2: NGC+ (mid) -->
+          <article class="pkg-card pkg-card--featured" aria-labelledby="pkg-ngc-name">
+            <div class="pkg-badge">Most Popular</div>
+            <div class="pkg-tier">Advanced</div>
+            <h3 id="pkg-ngc-name" class="pkg-name">Professional Coating<br>Package Two</h3>
+            <div class="pkg-product">Artdeshine NGC+ Graphene</div>
+            <div class="pkg-price">
+              <span class="price-from">from</span>
+              <span class="price-num">$1,500</span>
+            </div>
+            <div class="pkg-duration">24&ndash;48 hour service</div>
+            <ul class="pkg-inclusions">
+              <li>Advanced graphene-infused ceramic coating</li>
+              <li>7+ year guarantee</li>
+              <li>Wheel face protection</li>
+              <li>Windscreen protection</li>
+              <li>Gtechniq C4 Permanent Trim Restorer</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary pkg-cta">Get a Quote</a>
+          </article>
+
+          <!-- Package 1: Crystal Serum Ultra (elite) -->
+          <article class="pkg-card" aria-labelledby="pkg-ultra-name">
+            <div class="pkg-tier">Elite</div>
+            <h3 id="pkg-ultra-name" class="pkg-name">Professional Coating<br>Package One</h3>
+            <div class="pkg-product">Gtechniq Crystal Serum Ultra</div>
+            <div class="pkg-price">
+              <span class="price-from">from</span>
+              <span class="price-num">$1,600</span>
+            </div>
+            <div class="pkg-duration">24&ndash;48 hour service</div>
+            <ul class="pkg-inclusions">
+              <li>Industry-leading ceramic coating</li>
+              <li>9+ year guarantee</li>
+              <li>Wheel face protection</li>
+              <li>Windscreen protection</li>
+              <li>Gtechniq C4 Permanent Trim Restorer</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline pkg-cta">Get a Quote</a>
+          </article>
+
+        </div><!-- /pkg-grid -->
+
+        <!-- Optional Upgrades -->
+        <div class="upgrades">
+          <h3 class="upgrades-heading">Optional Upgrades</h3>
+          <div class="upgrades-grid">
+            <div class="upgrade-card">
+              <div class="upgrade-name">Two-Stage Paint Correction</div>
+              <p class="upgrade-desc">Recommended for older vehicles or vehicles with heavier paint defects.</p>
+              <div class="upgrade-price">from $200</div>
+            </div>
+            <div class="upgrade-card">
+              <div class="upgrade-name">Interior Protection</div>
+              <p class="upgrade-desc">Gtechniq Leather Guard, Smart Fabric Protection, and Matt Dash applied to all interior surfaces.</p>
+              <div class="upgrade-price">
+                from $250
+                <span class="upgrade-badge">50% off with ceramic</span>
+              </div>
             </div>
           </div>
-          <p class="card-desc">Single-stage paint correction followed by a 1-year entry ceramic coating. Ideal for newer vehicles needing light swirl removal and baseline hydrophobic protection.</p>
-          <ul class="card-inclusions" aria-label="Package inclusions">
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Full paint decontamination
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Single-stage machine polish
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              1-year ceramic coating
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Hydrophobic glass coating
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Tyre &amp; trim dressing
-            </li>
-          </ul>
-          <div class="card-duration">
-            <span class="duration-label">DURATION</span>
-            <span class="duration-value">1–2 DAYS</span>
-          </div>
-          <a href="#quote" class="card-cta" aria-label="Get a quote for Ceramic Lite package">GET A QUOTE →</a>
-        </article>
+        </div>
 
-        <!-- CARD 2: CERAMIC PRO (FEATURED) -->
-        <article class="package-card package-card--featured" role="listitem" aria-labelledby="pkg2-name">
-          <div class="card-badge">MOST POPULAR</div>
-          <div class="card-tier">TIER 02</div>
-          <div class="card-header">
-            <h3 id="pkg2-name" class="card-name">CERAMIC PRO</h3>
-            <div class="card-price">
-              <span class="price-from">FROM</span>
-              <span class="price-amount">$1,899</span>
+      </div><!-- /panel-ceramic -->
+
+      <!-- ====== DETAILING PANEL ====== -->
+      <div class="pkg-panel" id="panel-detail"
+        role="tabpanel" aria-labelledby="tab-detail" hidden>
+
+        <div class="pkg-grid">
+
+          <!-- Maintenance Detail -->
+          <article class="pkg-card" aria-labelledby="pkg-maint-name">
+            <div class="pkg-tier">Essential</div>
+            <h3 id="pkg-maint-name" class="pkg-name">Maintenance<br>Detail</h3>
+            <div class="pkg-price">
+              <span class="price-from">from</span>
+              <span class="price-num">$250</span>
             </div>
-          </div>
-          <p class="card-desc">Two-stage paint correction removes up to 90% of swirls and light scratches, followed by a professional-grade 3-year ceramic coating with enhanced chemical resistance.</p>
-          <ul class="card-inclusions" aria-label="Package inclusions">
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Full decontamination + clay bar
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Two-stage machine correction
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              3-year professional ceramic coating
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Hydrophobic glass + trim coating
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Full interior vacuum &amp; wipe-down
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Paint thickness readings report
-            </li>
-          </ul>
-          <div class="card-duration">
-            <span class="duration-label">DURATION</span>
-            <span class="duration-value">2–3 DAYS</span>
-          </div>
-          <a href="#quote" class="card-cta card-cta--featured" aria-label="Get a quote for Ceramic Pro package">GET A QUOTE →</a>
-        </article>
+            <div class="pkg-duration">3-hour service</div>
+            <ul class="pkg-inclusions">
+              <li><strong>Exterior:</strong> Decontamination wash with fallout removal, paint sealant, wheels cleaned &amp; tyres dressed</li>
+              <li><strong>Interior:</strong> Light vacuum, panel wipe-down, glass cleaned inside &amp; out</li>
+            </ul>
+            <p class="pkg-note">Ideal for ceramic-coated vehicles or near-new cars.</p>
+            <a href="#contact" class="btn btn-outline pkg-cta">Get a Quote</a>
+          </article>
 
-        <!-- CARD 3: APEX CERAMIC -->
-        <article class="package-card" role="listitem" aria-labelledby="pkg3-name">
-          <div class="card-tier">TIER 03</div>
-          <div class="card-header">
-            <h3 id="pkg3-name" class="card-name">APEX CERAMIC</h3>
-            <div class="card-price">
-              <span class="price-from">FROM</span>
-              <span class="price-amount">$2,999</span>
+          <!-- Deluxe Detail -->
+          <article class="pkg-card pkg-card--featured" aria-labelledby="pkg-deluxe-name">
+            <div class="pkg-badge">Best Value</div>
+            <div class="pkg-tier">Premium</div>
+            <h3 id="pkg-deluxe-name" class="pkg-name">Deluxe<br>Detail</h3>
+            <div class="pkg-price">
+              <span class="price-from">from</span>
+              <span class="price-num">$440</span>
             </div>
-          </div>
-          <p class="card-desc">The ultimate protection package. Multi-stage paint correction to achieve near-perfect paint clarity, topped with our highest-grade 7-year ceramic coating and full interior restoration.</p>
-          <ul class="card-inclusions" aria-label="Package inclusions">
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Full decontamination + iron removal
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              3-stage multi-step correction
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              7-year elite ceramic coating
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Full glass + trim + wheel coating
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Interior deep clean + leather treatment
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7L5.5 10.5L12 4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Full paint report + before/after photos
-            </li>
-          </ul>
-          <div class="card-duration">
-            <span class="duration-label">DURATION</span>
-            <span class="duration-value">3–5 DAYS</span>
-          </div>
-          <a href="#quote" class="card-cta" aria-label="Get a quote for Apex Ceramic package">GET A QUOTE →</a>
-        </article>
+            <div class="pkg-duration">6&ndash;7 hour service</div>
+            <ul class="pkg-inclusions">
+              <li><strong>Exterior:</strong> Full decontamination, clay bar, paint sealant, rims &amp; tyres dressed</li>
+              <li><strong>Interior:</strong> Full compressed-air vacuum, deep clean &amp; leather conditioning, steam extraction, all glass cleaned</li>
+              <li>UV dressing applied where required</li>
+              <li>Minor brush touch-ups where suitable</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary pkg-cta">Get a Quote</a>
+          </article>
 
-      </div>
+          <!-- Pre-Sale Detail -->
+          <article class="pkg-card" aria-labelledby="pkg-presale-name">
+            <div class="pkg-tier">Complete</div>
+            <h3 id="pkg-presale-name" class="pkg-name">Pre-Sale<br>Detail</h3>
+            <div class="pkg-price">
+              <span class="price-from">from</span>
+              <span class="price-num">$650</span>
+            </div>
+            <div class="pkg-duration">8&ndash;10 hour service</div>
+            <ul class="pkg-inclusions">
+              <li><strong>Exterior:</strong> Full decontamination, clay bar, single-stage paint enhancement, paint sealant, engine bay clean, wheels &amp; tyres dressed</li>
+              <li><strong>Interior:</strong> Full compressed-air vacuum, deep clean &amp; leather conditioning, steam extraction, all glass cleaned</li>
+              <li>UV dressing &amp; minor brush touch-ups</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline pkg-cta">Get a Quote</a>
+          </article>
 
-      <p class="packages-note">All pricing is indicative. Final quotes depend on vehicle size, paint condition, and current contamination. <a href="#quote">Book a free inspection</a>.</p>
+        </div>
+      </div><!-- /panel-detail -->
+
+      <p class="pkg-note-global">
+        All pricing is indicative. Final quotes depend on vehicle size, paint condition, and
+        contamination level. <a href="#contact">Request a free inspection.</a>
+      </p>
     </div>
   </section>
 
   <!-- ============================================================ -->
-  <!-- PROCESS                                                       -->
+  <!-- SERVICES                                                       -->
+  <!-- ============================================================ -->
+  <section id="services" aria-labelledby="services-heading">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-label">Expertise</div>
+        <h2 id="services-heading" class="section-title">Our Services</h2>
+      </header>
+      <div class="services-grid">
+
+        <div class="svc-card" data-reveal>
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+            </svg>
+          </div>
+          <h3 class="svc-name">Ceramic Coating</h3>
+          <p class="svc-desc">Advanced ceramic coatings form a durable, transparent layer that shields your vehicle from UV rays, environmental contaminants, and harsh elements — while deepening gloss and shine.</p>
+        </div>
+
+        <div class="svc-card" data-reveal>
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="svc-name">Paint Correction</h3>
+          <p class="svc-desc">State-of-the-art machine polishing removes swirl marks, scratches, and oxidation — restoring your vehicle's paint to its original glory with single or multi-stage correction.</p>
+        </div>
+
+        <div class="svc-card" data-reveal>
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M12 12v5M9 14.5h6"/>
+            </svg>
+          </div>
+          <h3 class="svc-name">Premium Detailing</h3>
+          <p class="svc-desc">Meticulous detailing packages covering every inch inside and out — steam extraction, leather conditioning, compressed-air vacuuming, and UV dressing for a showroom finish.</p>
+        </div>
+
+        <div class="svc-card" data-reveal>
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="svc-name">Pre-Sale Detail</h3>
+          <p class="svc-desc">Maximise your vehicle's resale value with a full decontamination, paint enhancement, engine bay clean, and deep interior restoration. Present your car at its absolute best.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PROCESS                                                        -->
   <!-- ============================================================ -->
   <section id="process" aria-labelledby="process-heading">
     <div class="section-container">
-      <div class="section-header">
-        <div class="section-label">
-          <span class="label-line" aria-hidden="true"></span>
-          OUR METHOD
-        </div>
-        <h2 id="process-heading" class="section-title">THE PRECISION<br>PROCESS</h2>
-      </div>
+      <header class="section-header">
+        <div class="section-label">Our Method</div>
+        <h2 id="process-heading" class="section-title">The Precision<br>Process</h2>
+      </header>
+      <div class="process-grid">
 
-      <div class="process-grid" role="list">
-        <div class="process-step" role="listitem">
-          <div class="step-number" aria-hidden="true">01</div>
-          <div class="step-content">
-            <h3 class="step-title">PAINT ASSESSMENT</h3>
-            <p class="step-desc">Every vehicle begins with a comprehensive paint thickness gauge reading and swirl assessment under controlled LED lighting. We document baseline condition before any work begins.</p>
+        <div class="process-step" data-reveal>
+          <div class="step-num" aria-hidden="true">01</div>
+          <div class="step-body">
+            <h3 class="step-title">Paint Assessment</h3>
+            <p class="step-desc">Every vehicle begins with a comprehensive paint thickness gauge reading and swirl assessment under controlled LED lighting. Baseline condition is fully documented before any work begins.</p>
           </div>
         </div>
-        <div class="process-connector" aria-hidden="true"></div>
-        <div class="process-step" role="listitem">
-          <div class="step-number" aria-hidden="true">02</div>
-          <div class="step-content">
-            <h3 class="step-title">DECONTAMINATION</h3>
-            <p class="step-desc">Chemical decontamination with a pH-neutral wash, followed by iron fallout remover and a full clay bar treatment to achieve a microscopically clean surface before machine work.</p>
+
+        <div class="process-step" data-reveal>
+          <div class="step-num" aria-hidden="true">02</div>
+          <div class="step-body">
+            <h3 class="step-title">Decontamination</h3>
+            <p class="step-desc">Chemical decontamination with a pH-neutral wash, followed by iron fallout remover and a full clay bar treatment to achieve a microscopically clean surface before machine work begins.</p>
           </div>
         </div>
-        <div class="process-connector" aria-hidden="true"></div>
-        <div class="process-step" role="listitem">
-          <div class="step-number" aria-hidden="true">03</div>
-          <div class="step-content">
-            <h3 class="step-title">CORRECTION &amp; COATING</h3>
-            <p class="step-desc">Machine polishing removes oxidation, swirl marks, and light scratches. The vehicle is IPA wiped and coated in a controlled environment to maximise ceramic bond strength and longevity.</p>
+
+        <div class="process-step" data-reveal>
+          <div class="step-num" aria-hidden="true">03</div>
+          <div class="step-body">
+            <h3 class="step-title">Correction &amp; Coating</h3>
+            <p class="step-desc">Machine polishing removes oxidation, swirl marks, and light scratches. The vehicle is IPA-wiped and coated in a controlled environment to maximise ceramic bond strength and longevity.</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- ============================================================ -->
-  <!-- QUOTE FORM                                                    -->
+  <!-- SERVICE AREA                                                   -->
   <!-- ============================================================ -->
-  <section id="quote" aria-labelledby="quote-heading">
+  <section id="area" aria-labelledby="area-heading">
     <div class="section-container">
-      <div class="quote-layout">
-        <div class="quote-info">
-          <div class="section-label">
-            <span class="label-line" aria-hidden="true"></span>
-            BOOK YOUR DETAIL
-          </div>
-          <h2 id="quote-heading" class="section-title">GET A<br>QUOTE</h2>
-          <p class="section-sub">We respond to all quote requests within 24 hours. Alternatively, call us directly during business hours.</p>
-          <div class="quote-contact">
-            <div class="contact-item">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M13.5 10.5L11 13C8 13 3 8 3 5L5.5 2.5L7.5 5L6 6.5C7 8 8 9 9.5 10L11 8.5L13.5 10.5Z" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <header class="section-header">
+        <div class="section-label">Coverage</div>
+        <h2 id="area-heading" class="section-title">Service Area</h2>
+        <p class="section-sub">Based in North Geelong. Servicing Geelong and all surrounding suburbs.</p>
+      </header>
+      <ul class="suburbs-grid" aria-label="Suburbs serviced by RGDETAILING">
+        <li>Armstrong Creek</li><li>Belmont</li><li>Bell Park</li>
+        <li>Bell Post Hill</li><li>Breakwater</li><li>Corio</li>
+        <li>East Geelong</li><li>Geelong West</li><li>Grovedale</li>
+        <li>Hamlyn Heights</li><li>Herne Hill</li><li>Highton</li>
+        <li>Lara</li><li>Leopold</li><li>Lovely Banks</li>
+        <li>Manifold Heights</li><li>Newtown</li>
+        <li class="suburb--home">North Geelong</li>
+        <li>Norlane</li><li>South Geelong</li><li>Thomson</li>
+        <li>Torquay</li><li>Waurn Ponds</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CONTACT / QUOTE                                               -->
+  <!-- ============================================================ -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="section-container">
+      <div class="contact-layout">
+
+        <!-- Info col -->
+        <div class="contact-info">
+          <div class="section-label">Book Your Detail</div>
+          <h2 id="contact-heading" class="section-title">Get a Quote</h2>
+          <p class="section-sub">We respond to all quote requests within 24 hours. Prefer a faster response? Call us directly during business hours.</p>
+
+          <ul class="contact-details" aria-label="Contact details">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
-              <span>0400 000 000</span>
-            </div>
-            <div class="contact-item">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <rect x="2" y="4" width="12" height="9" rx="0" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
-                <path d="M2 4L8 9L14 4" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-linecap="round"/>
+              <a href="tel:+61438781340">0438 781 340</a>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
               </svg>
-              <span>hello@rgdetailing.com.au</span>
-            </div>
-            <div class="contact-item">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5Z" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
-                <circle cx="8" cy="6" r="1.5" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+              <a href="mailto:richie@rgdetailing.com.au">richie@rgdetailing.com.au</a>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>North Geelong, VIC 3215</span>
+              <span>3/56 Slevin Street, North Geelong VIC</span>
+            </li>
+          </ul>
+
+          <div class="business-hours">
+            <h3 class="hours-heading">Business Hours</h3>
+            <div class="hours-row">
+              <span>Monday &ndash; Saturday</span><span>8:00AM &ndash; 6:00PM</span>
             </div>
-          </div>
-          <div class="quote-hours">
-            <div class="hours-label">BUSINESS HOURS</div>
-            <div class="hours-row"><span>Mon – Fri</span><span>8:00am – 6:00pm</span></div>
-            <div class="hours-row"><span>Saturday</span><span>9:00am – 4:00pm</span></div>
-            <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+            <div class="hours-row hours-closed">
+              <span>Sunday</span><span>Closed</span>
+            </div>
           </div>
         </div>
 
-        <div class="quote-form-wrap">
-          <form id="quote-form" novalidate aria-label="Quote request form">
-            <input type="hidden" id="csrf-token" name="csrf_token" value="">
+        <!-- Form col -->
+        <form id="quoteForm" class="quote-form" novalidate
+          aria-label="Quote request form">
 
-            <div id="form-success" class="form-success" role="alert" aria-live="polite" hidden>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10L8 14L16 6" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Quote request received. We'll contact you within 24 hours.
+          <div class="form-field">
+            <label for="f-name" class="form-label">
+              Full Name <span class="req" aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="f-name" name="name" class="form-input"
+              placeholder="John Smith"
+              required minlength="2" maxlength="100"
+              autocomplete="name"
+              aria-required="true" aria-describedby="err-name">
+            <span class="field-error" id="err-name" role="alert"></span>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="f-email" class="form-label">
+                Email <span class="req" aria-hidden="true">*</span>
+              </label>
+              <input type="email" id="f-email" name="email" class="form-input"
+                placeholder="john@example.com"
+                required autocomplete="email"
+                aria-required="true" aria-describedby="err-email">
+              <span class="field-error" id="err-email" role="alert"></span>
             </div>
-            <div id="form-error" class="form-error-banner" role="alert" aria-live="assertive" hidden></div>
-
-            <div class="form-row form-row--two">
-              <div class="form-group">
-                <label for="f-name" class="form-label">Full Name <span class="required" aria-label="required">*</span></label>
-                <input type="text" id="f-name" name="name" class="form-input" autocomplete="name" required minlength="2" maxlength="100" aria-describedby="f-name-error" placeholder="James Wilson">
-                <span id="f-name-error" class="field-error" role="alert" aria-live="polite"></span>
-              </div>
-              <div class="form-group">
-                <label for="f-email" class="form-label">Email Address <span class="required" aria-label="required">*</span></label>
-                <input type="email" id="f-email" name="email" class="form-input" autocomplete="email" required maxlength="254" aria-describedby="f-email-error" placeholder="james@example.com">
-                <span id="f-email-error" class="field-error" role="alert" aria-live="polite"></span>
-              </div>
+            <div class="form-field">
+              <label for="f-phone" class="form-label">
+                Phone <span class="req" aria-hidden="true">*</span>
+              </label>
+              <input type="tel" id="f-phone" name="phone" class="form-input"
+                placeholder="0412 345 678"
+                required autocomplete="tel"
+                aria-required="true" aria-describedby="err-phone">
+              <span class="field-error" id="err-phone" role="alert"></span>
             </div>
+          </div>
 
-            <div class="form-row form-row--two">
-              <div class="form-group">
-                <label for="f-phone" class="form-label">Phone Number <span class="required" aria-label="required">*</span></label>
-                <input type="tel" id="f-phone" name="phone" class="form-input" autocomplete="tel" required maxlength="20" aria-describedby="f-phone-error" placeholder="0412 345 678">
-                <span id="f-phone-error" class="field-error" role="alert" aria-live="polite"></span>
-              </div>
-              <div class="form-group">
-                <label for="f-vehicle" class="form-label">Vehicle <span class="required" aria-label="required">*</span></label>
-                <input type="text" id="f-vehicle" name="vehicle" class="form-input" required minlength="2" maxlength="100" aria-describedby="f-vehicle-error" placeholder="2022 BMW M4 Competition">
-                <span id="f-vehicle-error" class="field-error" role="alert" aria-live="polite"></span>
-              </div>
-            </div>
+          <div class="form-field">
+            <label for="f-vehicle" class="form-label">
+              Vehicle <span class="req" aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="f-vehicle" name="vehicle" class="form-input"
+              placeholder="e.g. 2023 BMW M4 Competition"
+              required minlength="2" maxlength="100"
+              aria-required="true" aria-describedby="err-vehicle">
+            <span class="field-error" id="err-vehicle" role="alert"></span>
+          </div>
 
-            <div class="form-group">
-              <label for="f-package" class="form-label">Preferred Package <span class="required" aria-label="required">*</span></label>
-              <div class="select-wrap">
-                <select id="f-package" name="package" class="form-input form-select" required aria-describedby="f-package-error">
-                  <option value="" disabled selected>Select a package</option>
-                  <option value="CERAMIC_LITE">Ceramic Lite — from $999</option>
-                  <option value="CERAMIC_PRO">Ceramic Pro — from $1,899</option>
-                  <option value="APEX_CERAMIC">Apex Ceramic — from $2,999</option>
-                </select>
-                <svg class="select-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <span id="f-package-error" class="field-error" role="alert" aria-live="polite"></span>
-            </div>
+          <div class="form-field">
+            <label for="f-package" class="form-label">
+              Interested In <span class="req" aria-hidden="true">*</span>
+            </label>
+            <select id="f-package" name="package" class="form-input form-select"
+              required aria-required="true" aria-describedby="err-package">
+              <option value="" disabled selected>Select a package&hellip;</option>
+              <optgroup label="Ceramic Coating">
+                <option value="CERAMIC_LITE">Professional Basic Ceramic (CSL) &mdash; from $1,200</option>
+                <option value="CERAMIC_PRO">Professional NGC+ Graphene &mdash; from $1,500</option>
+                <option value="APEX_CERAMIC">Professional Crystal Serum Ultra &mdash; from $1,600</option>
+              </optgroup>
+              <optgroup label="Detailing">
+                <option value="MAINTENANCE_DETAIL">Maintenance Detail &mdash; from $250</option>
+                <option value="DELUXE_DETAIL">Deluxe Detail &mdash; from $440</option>
+                <option value="PRE_SALE_DETAIL">Pre-Sale Detail &mdash; from $650</option>
+              </optgroup>
+            </select>
+            <span class="field-error" id="err-package" role="alert"></span>
+          </div>
 
-            <div class="form-group">
-              <label for="f-message" class="form-label">Additional Notes <span class="form-optional">(optional)</span></label>
-              <textarea id="f-message" name="message" class="form-input form-textarea" rows="4" maxlength="500" aria-describedby="f-message-hint f-message-count" placeholder="Describe your vehicle's current paint condition, any specific concerns, or preferred dates..."></textarea>
-              <div class="textarea-footer">
-                <span id="f-message-hint" class="field-hint">Max 500 characters</span>
-                <span id="f-message-count" class="char-count" aria-live="polite">0 / 500</span>
-              </div>
-            </div>
+          <div class="form-field">
+            <label for="f-message" class="form-label">
+              Additional Notes
+              <span class="form-optional">(optional)</span>
+            </label>
+            <textarea id="f-message" name="message" class="form-input form-textarea"
+              placeholder="Vehicle condition, specific concerns, or preferred dates."
+              maxlength="500" rows="4"
+              aria-describedby="msg-count"></textarea>
+            <span class="field-char" id="msg-count" aria-live="polite">0 / 500</span>
+          </div>
 
-            <button type="submit" class="form-submit" id="form-submit" aria-label="Submit quote request">
-              <span class="submit-text">SUBMIT QUOTE REQUEST</span>
-              <span class="submit-loading" aria-hidden="true" hidden>
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="spin"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5" stroke-dasharray="32" stroke-dashoffset="10"/></svg>
-                SENDING…
-              </span>
-            </button>
+          <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+            <span class="btn-text">Send Quote Request</span>
+            <span class="btn-spin" aria-hidden="true"></span>
+          </button>
 
-            <p class="form-disclaimer">By submitting this form you agree to be contacted by RGDETAILING regarding your quote. We do not share your information with third parties.</p>
-          </form>
-        </div>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+        </form>
+
       </div>
     </div>
   </section>
 
   <!-- ============================================================ -->
-  <!-- FOOTER                                                        -->
+  <!-- FOOTER                                                         -->
   <!-- ============================================================ -->
   <footer id="footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="footer-logo">RG<span class="footer-logo-sep">/</span>DETAILING</span>
-        <p class="footer-tagline">Paint Correction &amp; Ceramic Coating Specialists.<br>North Geelong, Victoria.</p>
+        <div class="footer-logo" aria-label="RGDETAILING">
+          <span class="logo-rg">RG</span><span class="logo-sep">/</span><span class="logo-word">DETAILING</span>
+        </div>
+        <p class="footer-tagline">Premium Paint Protection.<br>Elite Detailing for Geelong &amp; Surrounds.</p>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+          class="footer-social" aria-label="Visit RGDETAILING on Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+          Facebook
+        </a>
       </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="#packages">Packages</a>
-        <a href="#process">Process</a>
-        <a href="#quote">Get a Quote</a>
-      </nav>
-      <div class="footer-legal">
-        <span>&copy; 2025 RGDETAILING. All rights reserved.</span>
-        <span>ABN 00 000 000 000</span>
+
+      <div class="footer-nav">
+        <h4 class="footer-col-heading">Navigate</h4>
+        <ul role="list">
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#area">Service Area</a></li>
+          <li><a href="#contact">Get a Quote</a></li>
+        </ul>
       </div>
+
+      <div class="footer-contact">
+        <h4 class="footer-col-heading">Contact</h4>
+        <ul role="list">
+          <li><a href="tel:+61438781340">0438 781 340</a></li>
+          <li><a href="mailto:richie@rgdetailing.com.au">richie@rgdetailing.com.au</a></li>
+          <li>3/56 Slevin Street, North Geelong VIC</li>
+        </ul>
+        <div class="footer-hours">
+          <span>Mon&ndash;Sat: 8:00AM &ndash; 6:00PM</span>
+          <span>Sunday: Closed</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2025 RGDETAILING. All rights reserved.</span>
+      <span>North Geelong, Victoria, Australia</span>
     </div>
   </footer>
 
-  <!-- GSAP 3.12 via CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="app.js" defer></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Initial setup: Hide main content and disable scrolling during preloader
-    gsap.set('body', { overflow: 'hidden' });
-    gsap.set('body > *:not(#preloader)', { autoAlpha: 0 });
-    gsap.set('#nav', { autoAlpha: 0, y: -20 }); // Specific initial state for nav
-
-    // ============================================================
-    // PRELOADER ANIMATION
-    // ============================================================
-    const preloaderTimeline = gsap.timeline({
-      onComplete: () => {
-        document.body.classList.add('preloader-done');
-        document.body.style.overflow = ''; // Re-enable scrolling
-
-        // Main content reveal timeline
-        const mainEntranceTimeline = gsap.timeline();
-
-        mainEntranceTimeline
-          .fromTo('body > *:not(#preloader)',
-            { autoAlpha: 0 },
-            { autoAlpha: 1, duration: 1.2, ease: 'power2.out' }
-          )
-          .fromTo('#nav',
-            { y: -20, autoAlpha: 0 },
-            { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power2.out' },
-            '<0.4' // Nav slides in slightly after main content starts to reveal
-          );
-
-        // Hero section entrance animation (once preloader is done and main content is visible)
-        gsap.timeline({ delay: 0.5 }) // A small delay after nav appears for hero content
-          .from('.hero-eyebrow', { autoAlpha: 0, y: 20, duration: 0.8, ease: 'power2.out' })
-          .from('.hero-title .title-line', {
-            autoAlpha: 0,
-            y: 40,
-            duration: 1,
-            ease: 'power3.out',
-            stagger: 0.15
-          }, '<0.2')
-          .from('.hero-sub', { autoAlpha: 0, y: 20, duration: 0.8, ease: 'power2.out' }, '-=0.5')
-          .from('.hero-actions .btn-primary, .hero-actions .btn-secondary', {
-            autoAlpha: 0,
-            y: 20,
-            duration: 0.7,
-            ease: 'power2.out',
-            stagger: 0.15
-          }, '-=0.4')
-          .from('.hero-stats .stat, .hero-stats .stat-rule', {
-            autoAlpha: 0,
-            y: 20,
-            duration: 0.7,
-            ease: 'power2.out',
-            stagger: 0.1
-          }, '-=0.4')
-          .from('.hero-scroll-indicator', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' }, '-=0.3');
-      }
-    });
-
-    // Preloader bar, logo, and location animation
-    preloaderTimeline
-      .fromTo('.preloader-logo', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.8, ease: 'power2.out' })
-      .fromTo('.preloader-location', { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '<0.2')
-      .to('#preloader-fill', {
-        width: '100%',
-        duration: 1.5,
-        ease: 'power2.inOut'
-      }, '+=0.5') // Start after logo/location
-      .to('#preloader', {
-        autoAlpha: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        delay: 0.3, // Small delay after fill completes
-        pointerEvents: 'none'
-      });
-
-    // ============================================================
-    // MARQUEE STRIP ANIMATION
-    // ============================================================
-    gsap.to('.marquee-track', {
-      xPercent: -50, // Move by 50% of its width to create a seamless loop with duplicated content
-      duration: 25, // Speed of the marquee
-      ease: 'linear',
-      repeat: -1, // Infinite loop
-    });
-
-    // ============================================================
-    // PACKAGES SECTION (Bento Grid) ANIMATIONS
-    // ============================================================
-    gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '#packages',
-          start: 'top 80%', // When the top of the trigger hits 80% down the viewport
-          toggleActions: 'play none none none', // Play animation once
-        }
-      });
-
-      tl.from('.section-label', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' })
-        .from('#packages-heading', { autoAlpha: 0, y: 20, duration: 0.8, ease: 'power2.out' }, '<0.2')
-        .from('#packages .section-sub', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' }, '<0.2')
-        .from('.package-card', {
-          autoAlpha: 0,
-          y: 50,
-          duration: 1,
-          ease: 'power3.out',
-          stagger: 0.2
-        }, '<0.3')
-        .from('.packages-note', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' }, '<0.2');
-    }, '#packages');
-
-    // ============================================================
-    // PROCESS SECTION ANIMATIONS
-    // ============================================================
-    gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '#process',
-          start: 'top 80%',
-          toggleActions: 'play none none none',
-        }
-      });
-
-      tl.from('#process .section-label', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' })
-        .from('#process-heading', { autoAlpha: 0, y: 20, duration: 0.8, ease: 'power2.out' }, '<0.2');
-
-      // Stagger steps and their corresponding connectors
-      gsap.utils.toArray('.process-step').forEach((step, i) => {
-        tl.from(step, { autoAlpha: 0, y: 50, duration: 1, ease: 'power3.out' }, '<0.3');
-        const connector = gsap.utils.toArray('.process-connector')[i];
-        if (connector) {
-          tl.from(connector, {
-            scaleX: 0,
-            transformOrigin: 'left center',
-            duration: 0.8,
-            ease: 'power2.out'
-          }, '<0.3'); // Connectors appear with or just after their preceding step
-        }
-      });
-    }, '#process');
-
-    // ============================================================
-    // QUOTE FORM SECTION ANIMATIONS
-    // ============================================================
-    gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '#quote',
-          start: 'top 80%',
-          toggleActions: 'play none none none',
-        }
-      });
-
-      tl.from('#quote .section-label', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' })
-        .from('#quote-heading', { autoAlpha: 0, y: 20, duration: 0.8, ease: 'power2.out' }, '<0.2')
-        .from('#quote .section-sub', { autoAlpha: 0, y: 20, duration: 0.7, ease: 'power2.out' }, '<0.2')
-        .from('.quote-contact .contact-item', {
-          autoAlpha: 0,
-          x: -30, // Slide from left
-          duration: 0.8,
-          ease: 'power2.out',
-          stagger: 0.15
-        }, '<0.3');
-      // Note: Form elements (inputs, textareas, buttons) are not present in the provided HTML.
-      // If they were, they would be targeted here for a staggered entrance animation.
-    }, '#quote');
-
-  });
-</script>
+  <script src="app.js"></script>
 </body>
 </html>
