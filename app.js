@@ -32,6 +32,34 @@
     });
   });
   /* ---------------------------------------------------------------
+     NAV SCROLL-SPY — highlight the link for the visible section
+  --------------------------------------------------------------- */
+  (function () {
+    var navLinks = document.querySelectorAll('.nav-link[data-section]');
+    var sections = Array.from(navLinks).map(function (a) {
+      return document.getElementById(a.getAttribute('data-section'));
+    });
+    var ACTIVE  = ['active-nav-blue', 'text-a0c9ff'];
+    var INACTIVE = 'text-on-surface-variant';
+    function setActive(id) {
+      navLinks.forEach(function (a) {
+        var isActive = a.getAttribute('data-section') === id;
+        ACTIVE.forEach(function (c) { a.classList.toggle(c, isActive); });
+        a.classList.toggle(INACTIVE, !isActive);
+      });
+    }
+    function onSpyScroll() {
+      var scrollY = window.scrollY + 120; // offset for fixed nav height
+      var active = null;
+      sections.forEach(function (sec) {
+        if (sec && sec.offsetTop <= scrollY) { active = sec.id; }
+      });
+      setActive(active);
+    }
+    window.addEventListener('scroll', onSpyScroll, { passive: true });
+    onSpyScroll();
+  }());
+  /* ---------------------------------------------------------------
      PACKAGE TABS
   --------------------------------------------------------------- */
   const tabs   = document.querySelectorAll('.pkg-tab');
