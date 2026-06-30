@@ -51,8 +51,12 @@
     function onSpyScroll() {
       var scrollY = window.scrollY + 120; // offset for fixed nav height
       var active = null;
-      sections.forEach(function (sec) {
-        if (sec && sec.offsetTop <= scrollY) { active = sec.id; }
+      // Sort by page position so the deepest visible section wins
+      var sorted = sections.filter(Boolean).slice().sort(function (a, b) {
+        return a.offsetTop - b.offsetTop;
+      });
+      sorted.forEach(function (sec) {
+        if (sec.offsetTop <= scrollY) { active = sec.id; }
       });
       setActive(active);
     }
