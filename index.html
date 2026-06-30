@@ -1,632 +1,613 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RGDETAILING — Premium ceramic coating and paint correction specialists in North Geelong, VIC. Gtechniq Crystal Serum Ultra, Artdeshine NGC+, and professional detailing packages.">
-  <title>RGDETAILING | Ceramic Coating & Paint Correction — North Geelong</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-</head>
-<body>
-
-  <!-- ============================================================ -->
-  <!-- NAVIGATION                                                    -->
-  <!-- ============================================================ -->
-  <nav id="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-bar">
-      <a href="#" class="nav-logo" aria-label="RGDETAILING home">
-        <span class="logo-rg">RG</span><span class="logo-sep">/</span><span class="logo-word">DETAILING</span>
-      </a>
-      <ul class="nav-links" role="list">
-        <li><a href="#packages" class="nav-link">Packages</a></li>
-        <li><a href="#services"  class="nav-link">Services</a></li>
-        <li><a href="#process"   class="nav-link">Process</a></li>
-        <li><a href="#contact"   class="nav-link">Contact</a></li>
-      </ul>
-      <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
-      <button class="nav-toggle" id="navToggle"
-        aria-label="Toggle menu" aria-expanded="false" aria-controls="navMobile">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="nav-mobile" id="navMobile" aria-hidden="true" role="menu">
-      <a href="#packages" class="nav-mobile-link" role="menuitem">Packages</a>
-      <a href="#services"  class="nav-mobile-link" role="menuitem">Services</a>
-      <a href="#process"   class="nav-mobile-link" role="menuitem">Process</a>
-      <a href="#contact"   class="nav-mobile-link" role="menuitem">Contact</a>
-      <a href="#contact"   class="btn btn-primary nav-mobile-cta" role="menuitem">Get a Quote</a>
-    </div>
-  </nav>
-
-  <!-- ============================================================ -->
-  <!-- HERO                                                          -->
-  <!-- ============================================================ -->
-  <section id="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg">
-      <img
-        src="test_assets/rg_hero_test.png"
-        alt="Glossy black BMW M4 Competition in a high-end detailing studio with dramatic LED hex-lights reflecting off freshly ceramic-coated paint"
-        class="hero-img"
-        loading="eager"
-        fetchpriority="high">
-      <div class="hero-overlay" aria-hidden="true"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-eyebrow" aria-label="Location: North Geelong, Victoria">
-        <span class="eyebrow-dot" aria-hidden="true"></span>
-        North Geelong &middot; Victoria
-      </div>
-      <h1 id="hero-heading" class="hero-title">
-        <span class="ht-line">Elite</span>
-        <span class="ht-line ht-accent">Detailing</span>
-        <span class="ht-line">for Geelong</span>
-      </h1>
-      <p class="hero-sub">
-        Paint Correction &amp; Ceramic Coating Specialists.<br>
-        Precision-engineered protection for every vehicle.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact"  class="btn btn-primary  btn-lg">Get a Quote</a>
-        <a href="#packages" class="btn btn-ghost    btn-lg">View Packages</a>
-      </div>
-      <div class="hero-stats" aria-label="Key facts">
-        <div class="stat">
-          <span class="stat-num">9yr</span>
-          <span class="stat-label">Max Coating Guarantee</span>
-        </div>
-        <div class="stat-rule" aria-hidden="true"></div>
-        <div class="stat">
-          <span class="stat-num">3</span>
-          <span class="stat-label">Ceramic Tiers</span>
-        </div>
-        <div class="stat-rule" aria-hidden="true"></div>
-        <div class="stat">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Satisfaction Guarantee</span>
-        </div>
-      </div>
-    </div>
-    <a href="#packages" class="hero-scroll" aria-label="Scroll down to packages">
-      <div class="scroll-pill"></div>
-    </a>
-  </section>
-
-  <!-- ============================================================ -->
-  <!-- MARQUEE                                                        -->
-  <!-- ============================================================ -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Ceramic Coating</span><span class="ms">&middot;</span>
-      <span>Paint Correction</span><span class="ms">&middot;</span>
-      <span>Gtechniq CSL</span><span class="ms">&middot;</span>
-      <span>Artdeshine NGC+</span><span class="ms">&middot;</span>
-      <span>Crystal Serum Ultra</span><span class="ms">&middot;</span>
-      <span>Interior Detailing</span><span class="ms">&middot;</span>
-      <span>Pre-Sale Detail</span><span class="ms">&middot;</span>
-      <span>North Geelong VIC</span><span class="ms">&middot;</span>
-      <!-- duplicate for seamless loop -->
-      <span>Ceramic Coating</span><span class="ms">&middot;</span>
-      <span>Paint Correction</span><span class="ms">&middot;</span>
-      <span>Gtechniq CSL</span><span class="ms">&middot;</span>
-      <span>Artdeshine NGC+</span><span class="ms">&middot;</span>
-      <span>Crystal Serum Ultra</span><span class="ms">&middot;</span>
-      <span>Interior Detailing</span><span class="ms">&middot;</span>
-      <span>Pre-Sale Detail</span><span class="ms">&middot;</span>
-      <span>North Geelong VIC</span><span class="ms">&middot;</span>
-    </div>
-  </div>
-
-  <!-- ============================================================ -->
-  <!-- PACKAGES                                                       -->
-  <!-- ============================================================ -->
-  <section id="packages" aria-labelledby="packages-heading">
-    <div class="section-container">
-      <header class="section-header">
-        <div class="section-label">Our Packages</div>
-        <h2 id="packages-heading" class="section-title">
-          Precision-Engineered<br>Protection
-        </h2>
-        <p class="section-sub">
-          All ceramic coating packages begin with a full decontamination wash, iron &amp; fallout
-          removal, clay bar treatment, and single-stage paint enhancement before any coating is applied.
-        </p>
-      </header>
-
-      <!-- Tab bar -->
-      <div class="pkg-tabs" role="tablist" aria-label="Package categories">
-        <button class="pkg-tab pkg-tab--active"
-          role="tab" id="tab-ceramic"
-          aria-selected="true" aria-controls="panel-ceramic">
-          Ceramic Coating
-        </button>
-        <button class="pkg-tab"
-          role="tab" id="tab-detail"
-          aria-selected="false" aria-controls="panel-detail">
-          Detailing
-        </button>
-      </div>
-
-      <!-- ====== CERAMIC PANEL ====== -->
-      <div class="pkg-panel pkg-panel--active" id="panel-ceramic"
-        role="tabpanel" aria-labelledby="tab-ceramic">
-
-        <div class="included-banner" aria-label="All ceramic packages include">
-          <span class="included-label">All ceramic packages include</span>
-          <ul class="included-list">
-            <li>Decontamination wash</li>
-            <li>Iron &amp; fallout removal</li>
-            <li>Clay bar treatment</li>
-            <li>Single-stage paint enhancement</li>
-          </ul>
-        </div>
-
-        <div class="pkg-grid">
-
-          <!-- Package 3: CSL (entry) -->
-          <article class="pkg-card" aria-labelledby="pkg-csl-name">
-            <div class="pkg-tier">Basic</div>
-            <h3 id="pkg-csl-name" class="pkg-name">Professional Basic<br>Ceramic Package</h3>
-            <div class="pkg-product">Gtechniq Crystal Serum Light (CSL)</div>
-            <div class="pkg-price">
-              <span class="price-from">from</span>
-              <span class="price-num">$1,200</span>
-            </div>
-            <div class="pkg-duration">24&ndash;48 hour service</div>
-            <ul class="pkg-inclusions">
-              <li>Gtechniq CSL on all painted surfaces</li>
-              <li>5-year guarantee</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline pkg-cta">Get a Quote</a>
-          </article>
-
-          <!-- Package 2: NGC+ (mid) -->
-          <article class="pkg-card pkg-card--featured" aria-labelledby="pkg-ngc-name">
-            <div class="pkg-badge">Most Popular</div>
-            <div class="pkg-tier">Advanced</div>
-            <h3 id="pkg-ngc-name" class="pkg-name">Professional Coating<br>Package Two</h3>
-            <div class="pkg-product">Artdeshine NGC+ Graphene</div>
-            <div class="pkg-price">
-              <span class="price-from">from</span>
-              <span class="price-num">$1,500</span>
-            </div>
-            <div class="pkg-duration">24&ndash;48 hour service</div>
-            <ul class="pkg-inclusions">
-              <li>Advanced graphene-infused ceramic coating</li>
-              <li>7+ year guarantee</li>
-              <li>Wheel face protection</li>
-              <li>Windscreen protection</li>
-              <li>Gtechniq C4 Permanent Trim Restorer</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary pkg-cta">Get a Quote</a>
-          </article>
-
-          <!-- Package 1: Crystal Serum Ultra (elite) -->
-          <article class="pkg-card" aria-labelledby="pkg-ultra-name">
-            <div class="pkg-tier">Elite</div>
-            <h3 id="pkg-ultra-name" class="pkg-name">Professional Coating<br>Package One</h3>
-            <div class="pkg-product">Gtechniq Crystal Serum Ultra</div>
-            <div class="pkg-price">
-              <span class="price-from">from</span>
-              <span class="price-num">$1,600</span>
-            </div>
-            <div class="pkg-duration">24&ndash;48 hour service</div>
-            <ul class="pkg-inclusions">
-              <li>Industry-leading ceramic coating</li>
-              <li>9+ year guarantee</li>
-              <li>Wheel face protection</li>
-              <li>Windscreen protection</li>
-              <li>Gtechniq C4 Permanent Trim Restorer</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline pkg-cta">Get a Quote</a>
-          </article>
-
-        </div><!-- /pkg-grid -->
-
-        <!-- Optional Upgrades -->
-        <div class="upgrades">
-          <h3 class="upgrades-heading">Optional Upgrades</h3>
-          <div class="upgrades-grid">
-            <div class="upgrade-card">
-              <div class="upgrade-name">Two-Stage Paint Correction</div>
-              <p class="upgrade-desc">Recommended for older vehicles or vehicles with heavier paint defects.</p>
-              <div class="upgrade-price">from $200</div>
-            </div>
-            <div class="upgrade-card">
-              <div class="upgrade-name">Interior Protection</div>
-              <p class="upgrade-desc">Gtechniq Leather Guard, Smart Fabric Protection, and Matt Dash applied to all interior surfaces.</p>
-              <div class="upgrade-price">
-                from $250
-                <span class="upgrade-badge">50% off with ceramic</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /panel-ceramic -->
-
-      <!-- ====== DETAILING PANEL ====== -->
-      <div class="pkg-panel" id="panel-detail"
-        role="tabpanel" aria-labelledby="tab-detail" hidden>
-
-        <div class="pkg-grid">
-
-          <!-- Maintenance Detail -->
-          <article class="pkg-card" aria-labelledby="pkg-maint-name">
-            <div class="pkg-tier">Essential</div>
-            <h3 id="pkg-maint-name" class="pkg-name">Maintenance<br>Detail</h3>
-            <div class="pkg-price">
-              <span class="price-from">from</span>
-              <span class="price-num">$250</span>
-            </div>
-            <div class="pkg-duration">3-hour service</div>
-            <ul class="pkg-inclusions">
-              <li><strong>Exterior:</strong> Decontamination wash with fallout removal, paint sealant, wheels cleaned &amp; tyres dressed</li>
-              <li><strong>Interior:</strong> Light vacuum, panel wipe-down, glass cleaned inside &amp; out</li>
-            </ul>
-            <p class="pkg-note">Ideal for ceramic-coated vehicles or near-new cars.</p>
-            <a href="#contact" class="btn btn-outline pkg-cta">Get a Quote</a>
-          </article>
-
-          <!-- Deluxe Detail -->
-          <article class="pkg-card pkg-card--featured" aria-labelledby="pkg-deluxe-name">
-            <div class="pkg-badge">Best Value</div>
-            <div class="pkg-tier">Premium</div>
-            <h3 id="pkg-deluxe-name" class="pkg-name">Deluxe<br>Detail</h3>
-            <div class="pkg-price">
-              <span class="price-from">from</span>
-              <span class="price-num">$440</span>
-            </div>
-            <div class="pkg-duration">6&ndash;7 hour service</div>
-            <ul class="pkg-inclusions">
-              <li><strong>Exterior:</strong> Full decontamination, clay bar, paint sealant, rims &amp; tyres dressed</li>
-              <li><strong>Interior:</strong> Full compressed-air vacuum, deep clean &amp; leather conditioning, steam extraction, all glass cleaned</li>
-              <li>UV dressing applied where required</li>
-              <li>Minor brush touch-ups where suitable</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary pkg-cta">Get a Quote</a>
-          </article>
-
-          <!-- Pre-Sale Detail -->
-          <article class="pkg-card" aria-labelledby="pkg-presale-name">
-            <div class="pkg-tier">Complete</div>
-            <h3 id="pkg-presale-name" class="pkg-name">Pre-Sale<br>Detail</h3>
-            <div class="pkg-price">
-              <span class="price-from">from</span>
-              <span class="price-num">$650</span>
-            </div>
-            <div class="pkg-duration">8&ndash;10 hour service</div>
-            <ul class="pkg-inclusions">
-              <li><strong>Exterior:</strong> Full decontamination, clay bar, single-stage paint enhancement, paint sealant, engine bay clean, wheels &amp; tyres dressed</li>
-              <li><strong>Interior:</strong> Full compressed-air vacuum, deep clean &amp; leather conditioning, steam extraction, all glass cleaned</li>
-              <li>UV dressing &amp; minor brush touch-ups</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline pkg-cta">Get a Quote</a>
-          </article>
-
-        </div>
-      </div><!-- /panel-detail -->
-
-      <p class="pkg-note-global">
-        All pricing is indicative. Final quotes depend on vehicle size, paint condition, and
-        contamination level. <a href="#contact">Request a free inspection.</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- ============================================================ -->
-  <!-- SERVICES                                                       -->
-  <!-- ============================================================ -->
-  <section id="services" aria-labelledby="services-heading">
-    <div class="section-container">
-      <header class="section-header">
-        <div class="section-label">Expertise</div>
-        <h2 id="services-heading" class="section-title">Our Services</h2>
-      </header>
-      <div class="services-grid">
-
-        <div class="svc-card" data-reveal>
-          <div class="svc-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
-            </svg>
-          </div>
-          <h3 class="svc-name">Ceramic Coating</h3>
-          <p class="svc-desc">Advanced ceramic coatings form a durable, transparent layer that shields your vehicle from UV rays, environmental contaminants, and harsh elements — while deepening gloss and shine.</p>
-        </div>
-
-        <div class="svc-card" data-reveal>
-          <div class="svc-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-            </svg>
-          </div>
-          <h3 class="svc-name">Paint Correction</h3>
-          <p class="svc-desc">State-of-the-art machine polishing removes swirl marks, scratches, and oxidation — restoring your vehicle's paint to its original glory with single or multi-stage correction.</p>
-        </div>
-
-        <div class="svc-card" data-reveal>
-          <div class="svc-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M12 12v5M9 14.5h6"/>
-            </svg>
-          </div>
-          <h3 class="svc-name">Premium Detailing</h3>
-          <p class="svc-desc">Meticulous detailing packages covering every inch inside and out — steam extraction, leather conditioning, compressed-air vacuuming, and UV dressing for a showroom finish.</p>
-        </div>
-
-        <div class="svc-card" data-reveal>
-          <div class="svc-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3 class="svc-name">Pre-Sale Detail</h3>
-          <p class="svc-desc">Maximise your vehicle's resale value with a full decontamination, paint enhancement, engine bay clean, and deep interior restoration. Present your car at its absolute best.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================ -->
-  <!-- PROCESS                                                        -->
-  <!-- ============================================================ -->
-  <section id="process" aria-labelledby="process-heading">
-    <div class="section-container">
-      <header class="section-header">
-        <div class="section-label">Our Method</div>
-        <h2 id="process-heading" class="section-title">The Precision<br>Process</h2>
-      </header>
-      <div class="process-grid">
-
-        <div class="process-step">
-          <div class="step-num" aria-hidden="true">01</div>
-          <div class="step-body">
-            <h3 class="step-title">Paint Assessment</h3>
-            <p class="step-desc">Every vehicle begins with a comprehensive paint thickness gauge reading and swirl assessment under controlled LED lighting. Baseline condition is fully documented before any work begins.</p>
-          </div>
-        </div>
-
-        <div class="process-step">
-          <div class="step-num" aria-hidden="true">02</div>
-          <div class="step-body">
-            <h3 class="step-title">Decontamination</h3>
-            <p class="step-desc">Chemical decontamination with a pH-neutral wash, followed by iron fallout remover and a full clay bar treatment to achieve a microscopically clean surface before machine work begins.</p>
-          </div>
-        </div>
-
-        <div class="process-step">
-          <div class="step-num" aria-hidden="true">03</div>
-          <div class="step-body">
-            <h3 class="step-title">Correction &amp; Coating</h3>
-            <p class="step-desc">Machine polishing removes oxidation, swirl marks, and light scratches. The vehicle is IPA-wiped and coated in a controlled environment to maximise ceramic bond strength and longevity.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================ -->
-  <!-- SERVICE AREA                                                   -->
-  <!-- ============================================================ -->
-  <section id="area" aria-labelledby="area-heading">
-    <div class="section-container">
-      <header class="section-header">
-        <div class="section-label">Coverage</div>
-        <h2 id="area-heading" class="section-title">Service Area</h2>
-        <p class="section-sub">Based in North Geelong. Servicing Geelong and all surrounding suburbs.</p>
-      </header>
-      <ul class="suburbs-grid" aria-label="Suburbs serviced by RGDETAILING">
-        <li>Armstrong Creek</li><li>Belmont</li><li>Bell Park</li>
-        <li>Bell Post Hill</li><li>Breakwater</li><li>Corio</li>
-        <li>East Geelong</li><li>Geelong West</li><li>Grovedale</li>
-        <li>Hamlyn Heights</li><li>Herne Hill</li><li>Highton</li>
-        <li>Lara</li><li>Leopold</li><li>Lovely Banks</li>
-        <li>Manifold Heights</li><li>Newtown</li>
-        <li class="suburb--home">North Geelong</li>
-        <li>Norlane</li><li>South Geelong</li><li>Thomson</li>
-        <li>Torquay</li><li>Waurn Ponds</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============================================================ -->
-  <!-- CONTACT / QUOTE                                               -->
-  <!-- ============================================================ -->
-  <section id="contact" aria-labelledby="contact-heading">
-    <div class="section-container">
-      <div class="contact-layout">
-
-        <!-- Info col -->
-        <div class="contact-info">
-          <div class="section-label">Book Your Detail</div>
-          <h2 id="contact-heading" class="section-title">Get a Quote</h2>
-          <p class="section-sub">We respond to all quote requests within 24 hours. Prefer a faster response? Call us directly during business hours.</p>
-
-          <ul class="contact-details" aria-label="Contact details">
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              <a href="tel:+61438781340">0438 781 340</a>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-              </svg>
-              <a href="mailto:richie@rgdetailing.com.au">richie@rgdetailing.com.au</a>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-              </svg>
-              <span>3/56 Slevin Street, North Geelong VIC</span>
-            </li>
-          </ul>
-
-          <div class="business-hours">
-            <h3 class="hours-heading">Business Hours</h3>
-            <div class="hours-row">
-              <span>Monday &ndash; Saturday</span><span>8:00AM &ndash; 6:00PM</span>
-            </div>
-            <div class="hours-row hours-closed">
-              <span>Sunday</span><span>Closed</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Form col -->
-        <form id="quoteForm" class="quote-form" novalidate
-          aria-label="Quote request form">
-
-          <div class="form-field">
-            <label for="f-name" class="form-label">
-              Full Name <span class="req" aria-hidden="true">*</span>
-            </label>
-            <input type="text" id="f-name" name="name" class="form-input"
-              placeholder="John Smith"
-              required minlength="2" maxlength="100"
-              autocomplete="name"
-              aria-required="true" aria-describedby="err-name">
-            <span class="field-error" id="err-name" role="alert"></span>
-          </div>
-
-          <div class="form-row-2">
-            <div class="form-field">
-              <label for="f-email" class="form-label">
-                Email <span class="req" aria-hidden="true">*</span>
-              </label>
-              <input type="email" id="f-email" name="email" class="form-input"
-                placeholder="john@example.com"
-                required autocomplete="email"
-                aria-required="true" aria-describedby="err-email">
-              <span class="field-error" id="err-email" role="alert"></span>
-            </div>
-            <div class="form-field">
-              <label for="f-phone" class="form-label">
-                Phone <span class="req" aria-hidden="true">*</span>
-              </label>
-              <input type="tel" id="f-phone" name="phone" class="form-input"
-                placeholder="0412 345 678"
-                required autocomplete="tel"
-                aria-required="true" aria-describedby="err-phone">
-              <span class="field-error" id="err-phone" role="alert"></span>
-            </div>
-          </div>
-
-          <div class="form-field">
-            <label for="f-vehicle" class="form-label">
-              Vehicle <span class="req" aria-hidden="true">*</span>
-            </label>
-            <input type="text" id="f-vehicle" name="vehicle" class="form-input"
-              placeholder="e.g. 2023 BMW M4 Competition"
-              required minlength="2" maxlength="100"
-              aria-required="true" aria-describedby="err-vehicle">
-            <span class="field-error" id="err-vehicle" role="alert"></span>
-          </div>
-
-          <div class="form-field">
-            <label for="f-package" class="form-label">
-              Interested In <span class="req" aria-hidden="true">*</span>
-            </label>
-            <select id="f-package" name="package" class="form-input form-select"
-              required aria-required="true" aria-describedby="err-package">
-              <option value="" disabled selected>Select a package&hellip;</option>
-              <optgroup label="Ceramic Coating">
-                <option value="CERAMIC_LITE">Professional Basic Ceramic (CSL) &mdash; from $1,200</option>
-                <option value="CERAMIC_PRO">Professional NGC+ Graphene &mdash; from $1,500</option>
-                <option value="APEX_CERAMIC">Professional Crystal Serum Ultra &mdash; from $1,600</option>
-              </optgroup>
-              <optgroup label="Detailing">
-                <option value="MAINTENANCE_DETAIL">Maintenance Detail &mdash; from $250</option>
-                <option value="DELUXE_DETAIL">Deluxe Detail &mdash; from $440</option>
-                <option value="PRE_SALE_DETAIL">Pre-Sale Detail &mdash; from $650</option>
-              </optgroup>
-            </select>
-            <span class="field-error" id="err-package" role="alert"></span>
-          </div>
-
-          <div class="form-field">
-            <label for="f-message" class="form-label">
-              Additional Notes
-              <span class="form-optional">(optional)</span>
-            </label>
-            <textarea id="f-message" name="message" class="form-input form-textarea"
-              placeholder="Vehicle condition, specific concerns, or preferred dates."
-              maxlength="500" rows="4"
-              aria-describedby="msg-count"></textarea>
-            <span class="field-char" id="msg-count" aria-live="polite">0 / 500</span>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
-            <span class="btn-text">Send Quote Request</span>
-            <span class="btn-spin" aria-hidden="true"></span>
-          </button>
-
-          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-
-        </form>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================ -->
-  <!-- FOOTER                                                         -->
-  <!-- ============================================================ -->
-  <footer id="footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="footer-logo" aria-label="RGDETAILING">
-          <span class="logo-rg">RG</span><span class="logo-sep">/</span><span class="logo-word">DETAILING</span>
-        </div>
-        <p class="footer-tagline">Premium Paint Protection.<br>Elite Detailing for Geelong &amp; Surrounds.</p>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
-          class="footer-social" aria-label="Visit RGDETAILING on Facebook">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-          </svg>
-          Facebook
-        </a>
-      </div>
-
-      <div class="footer-nav">
-        <h4 class="footer-col-heading">Navigate</h4>
-        <ul role="list">
-          <li><a href="#packages">Packages</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#area">Service Area</a></li>
-          <li><a href="#contact">Get a Quote</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contact">
-        <h4 class="footer-col-heading">Contact</h4>
-        <ul role="list">
-          <li><a href="tel:+61438781340">0438 781 340</a></li>
-          <li><a href="mailto:richie@rgdetailing.com.au">richie@rgdetailing.com.au</a></li>
-          <li>3/56 Slevin Street, North Geelong VIC</li>
-        </ul>
-        <div class="footer-hours">
-          <span>Mon&ndash;Sat: 8:00AM &ndash; 6:00PM</span>
-          <span>Sunday: Closed</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>&copy; 2025 RGDETAILING. All rights reserved.</span>
-      <span>North Geelong, Victoria, Australia</span>
-    </div>
-  </footer>
-
-  <script src="app.js"></script>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RGDETAILING | Premium Paint Protection &amp; Elite Detailing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- GSAP + ScrollTrigger CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "on-primary": "#313030",
+                "on-error-container": "#ffdad6",
+                "on-secondary-fixed-variant": "#10497a",
+                "safety-yellow": "#E6FC02",
+                "surface-bright": "#393939",
+                "on-tertiary": "#2e3300",
+                "primary": "#c9c6c5",
+                "secondary-fixed-dim": "#a0c9ff",
+                "surface-dim": "#131313",
+                "surface-tint": "#c9c6c5",
+                "surface-variant": "#353535",
+                "obsidian-surface": "#0F0F0F",
+                "tertiary-fixed": "#daef00",
+                "surface-container": "#1f2020",
+                "on-primary-container": "#7a7878",
+                "inverse-on-surface": "#303030",
+                "outline": "#8e9192",
+                "surface-container-high": "#2a2a2a",
+                "surface": "#131313",
+                "primary-fixed": "#e5e2e1",
+                "tertiary": "#bfd100",
+                "electric-blue": "#326295",
+                "on-surface": "#e5e2e1",
+                "on-error": "#690005",
+                "secondary-container": "#144b7d",
+                "outline-variant": "#444748",
+                "surface-container-low": "#1b1c1c",
+                "secondary-fixed": "#d2e4ff",
+                "on-background": "#e5e2e1",
+                "on-secondary": "#003259",
+                "secondary": "#a0c9ff",
+                "on-tertiary-container": "#747f00",
+                "inverse-primary": "#5f5e5e",
+                "background": "#131313",
+                "tertiary-fixed-dim": "#bfd100",
+                "error": "#ffb4ab",
+                "on-tertiary-fixed": "#1a1e00",
+                "surface-container-highest": "#353535",
+                "inverse-surface": "#e5e2e1",
+                "on-surface-variant": "#c4c7c7",
+                "glass-stroke": "rgba(255, 255, 255, 0.12)",
+                "on-tertiary-fixed-variant": "#444b00",
+                "on-secondary-container": "#8ebbf4",
+                "primary-container": "#080808",
+                "tertiary-container": "#070900",
+                "on-primary-fixed-variant": "#474646",
+                "primary-fixed-dim": "#c9c6c5",
+                "surface-container-lowest": "#0e0e0e",
+                "on-secondary-fixed": "#001c37",
+                "error-container": "#93000a",
+                "on-primary-fixed": "#1c1b1b"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+              },
+              "spacing": {
+                "gutter": "24px",
+                "margin-mobile": "20px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "container-max": "1280px"
+              },
+              "fontFamily": {
+                "label-bold": ["Inter"],
+                "label-sm": ["Inter"],
+                "body-lg": ["Inter"],
+                "display-xl": ["Montserrat"],
+                "headline-md": ["Montserrat"],
+                "body-md": ["Inter"],
+                "headline-lg-mobile": ["Montserrat"],
+                "headline-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #080808;
+            color: #e5e2e1;
+            overflow-x: hidden
+        }
+        .noise-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            pointer-events: none;
+            opacity: 0.04;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCUk1rWWg7KV7W6ElXukj3nRLpANAAFMZm1mEVHXgNs_oXOj7Q4N5O280S7Q1ERQL_UmZdXR8rqi-9HL6z2bpDkKtrlrMmV7behvicUOIzr_vFtbpE3y9JC3nDsgZQpCWjlU9HZ6Q-08BOXtweV8252mg0Gwyr-7QII6QIW728-wQux681bwjA1VlFKL10aB25EHBJahWAZC8NhQ0RignNbMxX2wYFYECwxJIMsuVsWp7M4awZ4kHDGUic94ge1GXOhQGYL9pEGEIZC)
+        }
+        .radial-mesh {
+            background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #080808 100%)
+        }
+        .glass-card {
+            background: rgba(20, 20, 20, 0.7);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            border-left: 1px solid rgba(255, 255, 255, 0.12)
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(230, 252, 2, 0.3)
+        }
+        .blue-glow-hover:hover {
+            box-shadow: 0 0 30px rgba(50, 98, 149, 0.4);
+            border-color: #326295
+        }
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+        .glowing-blue-gradient {
+            background: linear-gradient(135deg, #326295 0%, #144b7d 100%);
+            box-shadow: 0 0 25px rgba(50, 98, 149, 0.5);
+        }
+        .text-glow-blue {
+            text-shadow: 0 0 15px rgba(160, 201, 255, 0.6);
+            color: #a0c9ff;
+        }
+        .active-nav-blue {
+            border-bottom: 2px solid #326295;
+            color: #a0c9ff;
+            text-shadow: 0 0 10px rgba(50, 98, 149, 0.5);
+        }
+        /* Mobile nav */
+        #navMobile { display: none; flex-direction: column; }
+        #navMobile.open { display: flex; }
+        /* Form validation states */
+        .is-error { border-bottom-color: #ff5555 !important; }
+        .form-status { padding: 0.625rem 1rem; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; min-height: 1.5rem; }
+        .form-status:empty { display: none; }
+        .form-status.is-success { background: rgba(0,200,100,0.1); color: #00c86e; border: 1px solid rgba(0,200,100,0.2); }
+        .form-status.is-error   { background: rgba(255,85,85,0.1);  color: #ff7070; border: 1px solid rgba(255,85,85,0.2); }
+        /* Submit button loading state */
+        .loading .btn-text { opacity: 0; }
+        .loading .btn-spin { display: block !important; }
+    </style>
+</head>
+<body class="radial-mesh font-body-md text-body-md">
+<div class="noise-overlay"></div>
+<!-- Navigation -->
+<header id="nav" class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-glass-stroke shadow-2xl">
+<nav class="max-w-container-max mx-auto px-margin-desktop flex items-center justify-between h-20">
+<div class="font-display-xl text-headline-md tracking-tighter text-on-surface">RGDETAILING</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold active-nav-blue pb-1 transition-all" href="#services">Services</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-a0c9ff transition-all duration-300" href="#packages">Packages</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-a0c9ff transition-all duration-300" href="#about">About</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-a0c9ff transition-all duration-300" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="#contact" class="hidden md:block bg-safety-yellow text-on-primary font-label-bold text-label-bold px-6 py-3 rounded-DEFAULT hover:scale-95 transition-all duration-200 uppercase tracking-widest">Book Now</a>
+<button id="navToggle" aria-expanded="false" aria-label="Toggle navigation" class="md:hidden flex flex-col justify-center gap-[5px] w-10 h-10 p-2 rounded hover:bg-white/5 transition-colors">
+<span class="block w-5 h-0.5 bg-on-surface rounded transition-all origin-center"></span>
+<span class="block w-5 h-0.5 bg-on-surface rounded transition-all"></span>
+<span class="block w-5 h-0.5 bg-on-surface rounded transition-all origin-center"></span>
+</button>
+</div>
+</nav>
+<div id="navMobile" aria-hidden="true" class="bg-surface/95 backdrop-blur-xl border-t border-glass-stroke flex-col gap-1 px-6 py-4">
+<a href="#services" class="font-label-bold text-label-bold text-on-surface-variant py-3 border-b border-glass-stroke block hover:text-a0c9ff transition-colors">Services</a>
+<a href="#packages" class="font-label-bold text-label-bold text-on-surface-variant py-3 border-b border-glass-stroke block hover:text-a0c9ff transition-colors">Packages</a>
+<a href="#about"    class="font-label-bold text-label-bold text-on-surface-variant py-3 border-b border-glass-stroke block hover:text-a0c9ff transition-colors">About</a>
+<a href="#contact"  class="font-label-bold text-label-bold text-on-surface-variant py-3 block hover:text-a0c9ff transition-colors">Contact</a>
+<a href="#contact"  class="mt-3 block bg-safety-yellow text-on-primary font-label-bold text-label-bold px-6 py-3 text-center uppercase tracking-widest rounded-DEFAULT">Book Now</a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30 z-10"></div>
+<img alt="Ultra-high-fidelity cinematic photography of a black BMW M4 Competition inside a dark, modern detailing studio. Overhead hex-lights reflecting on the mirror-finish ceramic-coated paint." class="hero-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzd51nlFXvJsQvACeU8lzb0CbHbM1uAOc44sG6P6uk7L_ItaVFb2ec6vWFu6z9LghOyOOOTdee0VRB02h80V2ZR72XArGbNf8pX4GMt8RcUnTvujtihdPsQSyZjFk1ljmCN73D2JMXX6RAPmDefD_NphTNPfTAuEjt082-lCjlevf25W7ahGZv7sEuiErTZ5vTsVxijFf2SeSN0DxfbG0GKny0KwZqMuy7DyUKBya_O3zHwl1MLfVyYUTQFM9HUgQBf_mCSgfQJMq1"/>
+</div>
+<div class="relative z-20 text-center max-w-4xl px-margin-mobile">
+<span class="hero-eyebrow font-label-bold text-label-bold text-safety-yellow tracking-[0.4em] uppercase mb-6 block">Precision Automotive Care</span>
+<h1 class="ht-line font-display-xl text-display-xl text-on-surface mb-8 leading-none">RGDETAILING</h1>
+<p class="hero-sub font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    Premium Paint Protection — Elite Detailing for Geelong &amp; Surrounds. We master the art of automotive finish restoration and long-term protection.
+                </p>
+<div class="hero-actions flex flex-col md:flex-row gap-6 justify-center">
+<button class="glowing-blue-gradient text-white font-label-bold text-label-bold px-10 py-5 rounded-DEFAULT hover:opacity-90 transition-all flex items-center justify-center gap-3">
+                        EXPLORE SERVICES
+                        <span class="material-symbols-outlined text-white" style="font-size: 20px;">arrow_forward</span>
+</button>
+<button class="border border-glass-stroke text-on-surface font-label-bold text-label-bold px-10 py-5 rounded-DEFAULT hover:bg-electric-blue/10 transition-all blue-glow-hover">
+                        VIEW PRICING
+                    </button>
+</div>
+</div>
+</section>
+<!-- Stats / Overview -->
+<section class="py-24 border-y border-glass-stroke bg-obsidian-surface">
+<div class="hero-stats max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div>
+<div class="font-display-xl text-headline-lg text-safety-yellow mb-2">9+</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Year Protection</div>
+</div>
+<div>
+<div class="font-display-xl text-headline-lg text-safety-yellow mb-2">100%</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Master Applied</div>
+</div>
+<div>
+<div class="font-display-xl text-headline-lg text-safety-yellow mb-2">24h</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Service Turnaround</div>
+</div>
+<div>
+<div class="font-display-xl text-headline-lg text-safety-yellow mb-2">G</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Geelong &amp; Surrounds</div>
+</div>
+</div>
+</section>
+<!-- Ceramic Coating Bento Grid -->
+<section class="py-32 bg-background" id="packages">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<span class="font-label-bold text-label-bold text-electric-blue tracking-widest uppercase block mb-4">Ultimate Shield</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">CERAMIC COATING PACKAGES</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Experience next-generation protection with Gtechniq and Artdeshine graphene-infused coatings. Enhanced depth, gloss, and UV resistance for the ultimate showroom finish.
+                        </p>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-bold text-label-bold">
+<span class="material-symbols-outlined text-a0c9ff text-glow-blue">verified</span> Certified Gtechniq Installer
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Package 1 -->
+<div class="glass-card p-10 flex flex-col h-full group hover:bg-surface-container-high transition-all duration-500 rounded-lg">
+<div class="mb-8">
+<span class="font-label-bold text-label-sm bg-safety-yellow/10 text-safety-yellow px-3 py-1 rounded uppercase tracking-widest mb-4 inline-block">Professional Tier</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Package One</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Gtechniq Crystal Serum Ultra</p>
+</div>
+<div class="flex items-baseline gap-2 mb-8">
+<span class="font-body-md text-body-md text-on-surface-variant">FROM</span>
+<span class="font-display-xl text-headline-lg text-glow-blue">$1,600</span>
+</div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                9+ Years Guaranteed Protection
+                            </li>
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                Wheel Face &amp; Windscreen Protection
+                            </li>
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                C4 Permanent Trim Restorer
+                            </li>
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                Single-Stage Paint Enhancement
+                            </li>
+</ul>
+<button class="w-full border border-glass-stroke group-hover:border-electric-blue group-hover:text-a0c9ff py-4 transition-all uppercase font-label-bold text-label-bold tracking-widest">Select Package</button>
+</div>
+<!-- Package 2 -->
+<div class="glass-card p-10 flex flex-col h-full group bg-surface-container-high border-electric-blue/30 transition-all duration-500 rounded-lg scale-105 z-10 shadow-2xl shadow-electric-blue/5">
+<div class="mb-8">
+<span class="font-label-bold text-label-sm bg-electric-blue/10 text-a0c9ff px-3 py-1 rounded uppercase tracking-widest mb-4 inline-block">Advanced Graphene</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Package Two</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Artdeshine NGC+</p>
+</div>
+<div class="flex items-baseline gap-2 mb-8">
+<span class="font-body-md text-body-md text-on-surface-variant">FROM</span>
+<span class="font-display-xl text-headline-lg text-glow-blue">$1,500</span>
+</div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                7+ Years Guaranteed Protection
+                            </li>
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                Advanced Graphene-Infused Technology
+                            </li>
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                Wheel, Windscreen &amp; C4 Trim Restorer
+                            </li>
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                Decontamination &amp; Clay Bar Treatment
+                            </li>
+</ul>
+<button class="w-full bg-safety-yellow text-on-primary py-4 transition-all uppercase font-label-bold text-label-bold tracking-widest shadow-xl shadow-safety-yellow/20">Popular Choice</button>
+</div>
+<!-- Package 3 -->
+<div class="glass-card p-10 flex flex-col h-full group hover:bg-surface-container-high transition-all duration-500 rounded-lg">
+<div class="mb-8">
+<span class="font-label-bold text-label-sm bg-on-surface-variant/10 text-on-surface-variant px-3 py-1 rounded uppercase tracking-widest mb-4 inline-block">Essentials</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Basic Ceramic</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Crystal Serum Light (CSL)</p>
+</div>
+<div class="flex items-baseline gap-2 mb-8">
+<span class="font-body-md text-body-md text-on-surface-variant">FROM</span>
+<span class="font-display-xl text-headline-lg text-glow-blue">$1,200</span>
+</div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                5 Years Guaranteed Protection
+                            </li>
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                Gtechniq CSL All Painted Surfaces
+                            </li>
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                Single-Stage Paint Enhancement
+                            </li>
+<li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue" style="font-size: 18px;">check_circle</span>
+                                Iron &amp; Fallout Removal
+                            </li>
+</ul>
+<button class="w-full border border-glass-stroke group-hover:border-electric-blue group-hover:text-a0c9ff py-4 transition-all uppercase font-label-bold text-label-bold tracking-widest">Select Package</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailing Services Grid -->
+<section class="py-32 bg-obsidian-surface" id="services">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-24">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">PREMIUM DETAILING SOLUTIONS</h2>
+<div class="w-24 h-1 glowing-blue-gradient mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Maintenance -->
+<div class="glass-card overflow-hidden group">
+<div class="h-64 relative">
+<div class="absolute inset-0 bg-background/40 group-hover:bg-transparent transition-all duration-700"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU8hArjT4tAyNLHhalDZovLZnITC4sNvpf-E6cRY7ha_3fdm7JPa132whbUDzovtTwbCE89XSrsGV6YjBicbRmUtRCl4CB5knHifjCj3C5i9ktFrskFrhGDX5MkcFG4MFYxXi32dqso-Pj_3EEuqM1Sj2kjmOnXmNp6GRHoR9rtENnOqodnXkqPbTU72nXqwev3-LL2cSaJ21y6Xh_37gqoziNsvhwUWSRgIbiJUX94yYHpA23e-1mFMrWDpqCwOLb73odUOb-8pRk"/>
+<div class="absolute top-6 left-6 bg-background/80 backdrop-blur-md px-4 py-2 border border-glass-stroke">
+<span class="font-label-bold text-label-bold text-glow-blue">FROM $250</span>
+</div>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">Maintenance Detail</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Designed to maintain hydrophobic performance and add fresh protection. Ideal for new or ceramic-coated vehicles.</p>
+<div class="flex items-center gap-4 py-4 border-t border-glass-stroke font-label-bold text-label-sm text-on-surface-variant uppercase tracking-widest">
+<span class="material-symbols-outlined text-glow-blue" style="font-size: 18px;">schedule</span> 3-Hour Service
+                            </div>
+</div>
+</div>
+<!-- Deluxe -->
+<div class="glass-card overflow-hidden group border-electric-blue/20">
+<div class="h-64 relative">
+<div class="absolute inset-0 bg-background/40 group-hover:bg-transparent transition-all duration-700"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFn4WzUOKdC9fxPjsmd9reT_l6_2_880ULV8OOv-rdpsANasVID-JKdUUSCP2u4hBrEW0FseMh1Fl0Nul3Bhcndvs-Kzs-U-CrTlqVhoz2vfbiMgjA7TYMi6L6clvjKl7kiUYU-wWuxiSqm6gFXTtFejfvjheIguIf--NOQPAitwmRfbG_u9SHqsWFmuTEcJ24meAxifOxibmXnoWqMKkGq8lloqZpEF0HlYpkihVCMVHCJIoDAp01tbzxlDv9S0EEN8WMGJ2veglZ"/>
+<div class="absolute top-6 left-6 bg-background/80 backdrop-blur-md px-4 py-2 border border-glass-stroke">
+<span class="font-label-bold text-label-bold text-glow-blue">FROM $440</span>
+</div>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">Deluxe Detail</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Comprehensive exterior and interior rejuvenation including steam cleaning and leather conditioning.</p>
+<div class="flex items-center gap-4 py-4 border-t border-glass-stroke font-label-bold text-label-sm text-on-surface-variant uppercase tracking-widest">
+<span class="material-symbols-outlined text-glow-blue" style="font-size: 18px;">schedule</span> 6-7 Hour Service
+                            </div>
+</div>
+</div>
+<!-- Pre-Sale -->
+<div class="glass-card overflow-hidden group">
+<div class="h-64 relative">
+<div class="absolute inset-0 bg-background/40 group-hover:bg-transparent transition-all duration-700"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCguAjNjJal_Fvr7PyH2pHRjLs8FBF8mENRp4lKc1dhDPbR7ePs3HDiF4f6tP3UJKuVuCj1CgHVP5a3eRGO12aDVIxxpdvlbNIuOC5cR2cUxKap-z4Q_mDwzhQbzJT6Trb0hjR583dhcQ5b-N2iQI3MttI9yO8IFJ65ZAGy5Mq5BvrkTedslJ_zoYRARIeZwhvCMNUREZv8mQccXh8Tvu8xLcViv3J6QNGPVx3clvvoTuqH6lITbZCECvrMD5I5vwWY9qEDzXDvis0n"/>
+<div class="absolute top-6 left-6 bg-background/80 backdrop-blur-md px-4 py-2 border border-glass-stroke">
+<span class="font-label-bold text-label-bold text-glow-blue">FROM $650</span>
+</div>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">Pre-Sale Prep</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Maximum value restoration. Includes engine bay clean and single-stage paint enhancement for ultimate shelf appeal.</p>
+<div class="flex items-center gap-4 py-4 border-t border-glass-stroke font-label-bold text-label-sm text-on-surface-variant uppercase tracking-widest">
+<span class="material-symbols-outlined text-glow-blue" style="font-size: 18px;">schedule</span> 8-10 Hour Service
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upgrades Section -->
+<section class="py-32 bg-background relative overflow-hidden">
+<div class="absolute -right-64 top-0 w-[800px] h-[800px] bg-electric-blue/5 rounded-full blur-[120px]"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="absolute -inset-4 border border-electric-blue/20 rounded-xl"></div>
+<img class="rounded-lg relative z-10 w-full grayscale-[50%] hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtCALh9e5beSd9yHHFUYpTEY4ZNRdsccWkpQh-Yb4QP0KkZraOEajuv_4gjNd4FE2vrc7oUoJB5T53KWTGT-bAHJkyVQBqPKkXObVw2wKgTPyTkl5ih_j-pj1Xn5kX1uqWDBqJL6yw8XXpOjkOFFaSvfX04h9DH28vNrevKYmjGywvXGJHsgonl1E1fBIJXKd2SQ7zcnmPrhubhQzSOD_X7XoHQVyfA668YazgePQF978nQd5AnRVejW_-pddLAxbRFEpIKdRmQI_k"/>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">ELITE UPGRADES</h2>
+<div class="space-y-8">
+<div class="flex gap-6 p-6 glass-card rounded-lg hover:border-electric-blue/40 transition-colors">
+<span class="material-symbols-outlined text-a0c9ff text-glow-blue" style="font-size: 40px;">auto_fix_high</span>
+<div>
+<h5 class="font-label-bold text-label-bold text-on-surface uppercase mb-2">Two-Stage Paint Correction</h5>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">Recommended for vehicles with heavier paint defects or oxidation.</p>
+<span class="font-label-bold text-label-sm text-glow-blue">FROM $200</span>
+</div>
+</div>
+<div class="flex gap-6 p-6 glass-card rounded-lg border-electric-blue/30 bg-electric-blue/5">
+<span class="material-symbols-outlined text-a0c9ff text-glow-blue" style="font-size: 40px;">shield_with_heart</span>
+<div>
+<h5 class="font-label-bold text-label-bold text-on-surface uppercase mb-2">Interior Protection Bundle</h5>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">Leather Guard, Smart Fabric, and Matt Dash protection.</p>
+<div class="flex items-center gap-3">
+<span class="font-label-bold text-label-sm text-glow-blue">FROM $250</span>
+<span class="text-white bg-electric-blue px-2 py-0.5 rounded text-[10px] font-bold uppercase shadow-sm shadow-electric-blue/50">50% OFF WITH CERAMIC</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Area -->
+<section class="py-24 bg-obsidian-surface border-t border-glass-stroke" id="about">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h3 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-[0.3em] mb-12">Service Areas</h3>
+<div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+<!-- Service suburbs -->
+<span class="bg-surface-container px-4 py-2 border border-glass-stroke text-on-surface-variant font-label-bold text-label-sm rounded hover:border-electric-blue hover:text-a0c9ff transition-colors">North Geelong</span>
+<span class="bg-surface-container px-4 py-2 border border-glass-stroke text-on-surface-variant font-label-bold text-label-sm rounded hover:border-electric-blue hover:text-a0c9ff transition-colors">Armstrong Creek</span>
+<span class="bg-surface-container px-4 py-2 border border-glass-stroke text-on-surface-variant font-label-bold text-label-sm rounded hover:border-electric-blue hover:text-a0c9ff transition-colors">Belmont</span>
+<span class="bg-surface-container px-4 py-2 border border-glass-stroke text-on-surface-variant font-label-bold text-label-sm rounded hover:border-electric-blue hover:text-a0c9ff transition-colors">Geelong West</span>
+<span class="bg-surface-container px-4 py-2 border border-glass-stroke text-on-surface-variant font-label-bold text-label-sm rounded hover:border-electric-blue hover:text-a0c9ff transition-colors">Grovedale</span>
+<span class="bg-surface-container px-4 py-2 border border-glass-stroke text-on-surface-variant font-label-bold text-label-sm rounded hover:border-electric-blue hover:text-a0c9ff transition-colors">Highton</span>
+<span class="bg-surface-container px-4 py-2 border border-glass-stroke text-on-surface-variant font-label-bold text-label-sm rounded hover:border-electric-blue hover:text-a0c9ff transition-colors">Lara</span>
+<span class="bg-surface-container px-4 py-2 border border-glass-stroke text-on-surface-variant font-label-bold text-label-sm rounded hover:border-electric-blue hover:text-a0c9ff transition-colors">Torquay</span>
+<span class="bg-surface-container px-4 py-2 border border-glass-stroke text-on-surface-variant font-label-bold text-label-sm rounded hover:border-electric-blue hover:text-a0c9ff transition-colors">Waurn Ponds</span>
+<span class="bg-surface-container px-4 py-2 border border-glass-stroke text-on-surface-variant font-label-bold text-label-sm rounded hover:border-electric-blue hover:text-a0c9ff transition-colors">Leopold</span>
+<span class="bg-surface-container px-4 py-2 border border-glass-stroke text-on-surface-variant font-label-bold text-label-sm rounded hover:border-electric-blue hover:text-a0c9ff transition-colors">Newtown</span>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 bg-background" id="contact">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="glass-card p-12 md:p-20 relative overflow-hidden rounded-xl border border-electric-blue/20">
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-electric-blue/10 rounded-full blur-3xl"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 relative z-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">SECURE YOUR SHOWROOM FINISH</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Contact Richie today for a tailored quote or to book your precision detailing service.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full border border-glass-stroke flex items-center justify-center">
+<span class="material-symbols-outlined text-a0c9ff text-glow-blue">call</span>
+</div>
+<div>
+<div class="font-label-bold text-label-sm text-on-surface-variant uppercase">Call Richie</div>
+<div class="font-headline-md text-headline-md text-on-surface">0438 781 340</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full border border-glass-stroke flex items-center justify-center">
+<span class="material-symbols-outlined text-a0c9ff text-glow-blue">mail</span>
+</div>
+<div>
+<div class="font-label-bold text-label-sm text-on-surface-variant uppercase">Email</div>
+<div class="font-headline-md text-headline-md text-on-surface">richie@rgdetailing.com.au</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full border border-glass-stroke flex items-center justify-center">
+<span class="material-symbols-outlined text-a0c9ff text-glow-blue">location_on</span>
+</div>
+<div>
+<div class="font-label-bold text-label-sm text-on-surface-variant uppercase">Workshop</div>
+<div class="font-headline-md text-headline-md text-on-surface">3/56 Slevin Street, North Geelong</div>
+</div>
+</div>
+</div>
+</div>
+<form id="quoteForm" class="space-y-6" novalidate>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<input id="f-name" class="w-full bg-obsidian-surface border-b-2 border-glass-stroke focus:border-electric-blue text-on-surface py-4 px-2 outline-none transition-all placeholder:text-on-surface-variant/40" placeholder="Your Name" type="text" autocomplete="name" aria-label="Your Name"/>
+<p id="err-name" class="text-[12px] text-[#ff7070] mt-1 min-h-[1rem]"></p>
+</div>
+<div>
+<input id="f-email" class="w-full bg-obsidian-surface border-b-2 border-glass-stroke focus:border-electric-blue text-on-surface py-4 px-2 outline-none transition-all placeholder:text-on-surface-variant/40" placeholder="Email Address" type="email" autocomplete="email" aria-label="Email Address"/>
+<p id="err-email" class="text-[12px] text-[#ff7070] mt-1 min-h-[1rem]"></p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<input id="f-phone" class="w-full bg-obsidian-surface border-b-2 border-glass-stroke focus:border-electric-blue text-on-surface py-4 px-2 outline-none transition-all placeholder:text-on-surface-variant/40" placeholder="Phone (e.g. 0412 345 678)" type="tel" autocomplete="tel" aria-label="Phone Number"/>
+<p id="err-phone" class="text-[12px] text-[#ff7070] mt-1 min-h-[1rem]"></p>
+</div>
+<div>
+<input id="f-vehicle" class="w-full bg-obsidian-surface border-b-2 border-glass-stroke focus:border-electric-blue text-on-surface py-4 px-2 outline-none transition-all placeholder:text-on-surface-variant/40" placeholder="Vehicle (e.g. BMW M4 2024)" type="text" aria-label="Vehicle Details"/>
+<p id="err-vehicle" class="text-[12px] text-[#ff7070] mt-1 min-h-[1rem]"></p>
+</div>
+</div>
+<div>
+<select id="f-package" class="w-full bg-obsidian-surface border-b-2 border-glass-stroke focus:border-electric-blue text-on-surface py-4 px-2 outline-none transition-all appearance-none cursor-pointer" aria-label="Select Package">
+<option value="">Select a Package</option>
+<option value="CERAMIC_PRO">Package Two — Artdeshine NGC+ (FROM $1,500)</option>
+<option value="CERAMIC_LITE">Package One — Gtechniq Crystal Serum Ultra (FROM $1,600)</option>
+<option value="APEX_CERAMIC">Basic Ceramic — Crystal Serum Light (FROM $1,200)</option>
+</select>
+<p id="err-package" class="text-[12px] text-[#ff7070] mt-1 min-h-[1rem]"></p>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<label for="f-message" class="font-label-bold text-label-sm text-on-surface-variant uppercase tracking-widest">Additional Notes</label>
+<span id="msg-count" class="font-label-sm text-label-sm text-on-surface-variant/60">0 / 500</span>
+</div>
+<textarea id="f-message" class="w-full bg-obsidian-surface border-b-2 border-glass-stroke focus:border-electric-blue text-on-surface py-4 px-2 outline-none transition-all placeholder:text-on-surface-variant/40" placeholder="Tell us about your detailing needs..." rows="4" maxlength="500" aria-label="Additional Notes"></textarea>
+</div>
+<div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+<button id="submitBtn" type="submit" class="w-full glowing-blue-gradient text-white font-label-bold text-label-bold py-5 uppercase tracking-widest hover:opacity-90 transition-all flex items-center justify-center gap-3 relative">
+<span class="btn-text">SEND MESSAGE <span class="material-symbols-outlined text-white align-middle" style="font-size:20px;">send</span></span>
+<span class="btn-spin hidden absolute" aria-hidden="true">
+<svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>
+</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 bg-obsidian-surface border-t border-glass-stroke">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface mb-6">RGDETAILING</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Mastering the science of automotive protection. Providing Geelong with world-class detailing services since 2024.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-glass-stroke flex items-center justify-center hover:border-electric-blue hover:text-a0c9ff transition-all" href="#">FB</a>
+<a class="w-10 h-10 border border-glass-stroke flex items-center justify-center hover:border-electric-blue hover:text-a0c9ff transition-all" href="#">IG</a>
+</div>
+</div>
+<div>
+<h6 class="font-label-bold text-label-bold text-on-surface uppercase mb-8 tracking-widest">Services</h6>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-electric-blue transition-colors" href="#">Ceramic Coating</a></li>
+<li><a class="hover:text-electric-blue transition-colors" href="#">Paint Correction</a></li>
+<li><a class="hover:text-electric-blue transition-colors" href="#">Maintenance Detail</a></li>
+<li><a class="hover:text-electric-blue transition-colors" href="#">Pre-Sale Prep</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-bold text-label-bold text-on-surface uppercase mb-8 tracking-widest">Support</h6>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li>Monday–Saturday: 8AM–6PM</li>
+<li>Sunday: Closed</li>
+<li><a class="hover:text-electric-blue transition-colors" href="tel:0438781340">0438 781 340</a></li>
+<li><a class="hover:text-electric-blue transition-colors" href="mailto:richie@rgdetailing.com.au">richie@rgdetailing.com.au</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-bold text-label-bold text-on-surface uppercase mb-8 tracking-widest">Location</h6>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">3/56 Slevin Street,<br/>North Geelong, VIC</p>
+<div class="h-40 w-full glass-card rounded overflow-hidden">
+<div class="w-full h-full bg-cover bg-center grayscale opacity-50 hover:opacity-100 transition-opacity" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtg__WMNfaglRaP7a_kdycoeEZ6QKX0w-07LVMeIbrN0K95VylHKA1ah3BOBZiKzoMKQjQXofjYgmoAjqYVOK2Q4YwtswtEIE9WWFmPBJEYv-UGaGBqwuUJpk1WMrw_6R9AtGc9i0VrNum1zevjet4U7TFWwnfe0tzM4jU6OdWTFeO7cpr0VHkYhJw76gL7Vs0YEkAx4lv9xuj5sa5Q2tiHZ_6qF3oMAC98msAin0RacJPccDB5ywlUbDy9z5yZZU9Wl23-jODKuql')"></div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-20 pt-8 border-t border-glass-stroke flex flex-col md:flex-row justify-between items-center gap-6">
+<span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 RGDETAILING. All Rights Reserved. Precision Automotive Care.</span>
+<div class="flex gap-8 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">
+<a class="hover:text-electric-blue transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-electric-blue transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+    </script>
+<script src="app.js"></script>
+</body></html>
